@@ -1,0 +1,54 @@
+@use "../core/mixin" as *;
+.star {
+  @include flex;
+  align-content: start;
+  &-list {
+    position: relative;
+    height: 2rem;
+  }
+  &-flex {
+    @include flex;
+    .icon {
+      width: 1.6rem;
+      height: 1.6rem;
+      &:not(:first-child) {
+        margin-left: 0.4rem;
+      }
+      img {
+        display: block;
+      }
+    }
+  }
+  &-filter {
+    overflow: hidden;
+    position: absolute;
+    @include posi-vertical;
+    left: 0;
+    height: 100%;
+    width: 0;
+  }
+}
+.stars input {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+.stars input:nth-child(1):checked ~ label:nth-of-type(-n + 1),
+.stars input:nth-child(2):checked ~ label:nth-of-type(-n + 2),
+.stars input:nth-child(3):checked ~ label:nth-of-type(-n + 3),
+.stars input:nth-child(4):checked ~ label:nth-of-type(-n + 4),
+.stars input:nth-child(5):checked ~ label:nth-of-type(-n + 5) {
+  background: url(../assets/images/icon-star.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.stars label {
+  box-sizing: border-box;
+  display: inline-block;
+  margin-right: 6px;
+  height: 2rem;
+  width: 2rem;
+  background: url(../assets/images/star-opa.svg);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-size: contain;
+}

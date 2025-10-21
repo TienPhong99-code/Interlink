@@ -1,0 +1,125 @@
+@use "../core/mixin" as *;
+@use "../core/font" as *;
+.ft {
+  padding: 4rem 0;
+  background: #f1f1f1;
+  &-logo {
+    margin-bottom: 4rem;
+    @include max(1200px) {
+      margin-bottom: 2.4rem;
+    }
+    .custom-logo-link {
+      max-width: 22rem;
+      display: flex;
+      margin: 0 auto;
+    }
+  }
+  &-head {
+    .t-text {
+      @include fz-32;
+      font-weight: 600;
+      color: var(--color-sec);
+      text-align: center;
+    }
+  }
+  &-sc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.4rem;
+    color: var(--color-pri);
+    margin-top: 2.4rem;
+    @include max(500px) {
+      flex-direction: column;
+      gap: 0.8rem;
+      margin-top: 1.2rem;
+    }
+  }
+  &-address {
+    display: flex;
+    gap: 4rem;
+    margin: 4rem 0;
+    padding-bottom: 4rem;
+    border-bottom: 0.1rem solid rgba(5, 26, 83, 0.2);
+    @include max(1200px) {
+      gap: 1.2rem;
+    }
+    @include max(768px) {
+      flex-direction: column;
+      gap: 2.4rem;
+    }
+    &-item.iwt {
+      flex: 1;
+      --iz: 4rem;
+      --cl: var(--color-txt);
+      @include max(1200px) {
+        --iz: 3.2rem;
+      }
+    }
+  }
+  &-box {
+    .t-head {
+      font-weight: 600;
+      color: var(--color-sec);
+      margin-bottom: 2.4rem;
+      display: block;
+    }
+  }
+  &-nav {
+    .menu {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      li {
+        &.current-menu-item {
+          a {
+            color: var(--color-sec);
+          }
+        }
+      }
+      a {
+        color: var(--color-txt);
+        transition: 0.3s ease-in-out;
+        @include hover {
+          color: var(--color-sec);
+        }
+      }
+    }
+  }
+  &-cn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1.2rem;
+    .t-link {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      color: var(--color-sec);
+      transition: 0.3s ease-in-out;
+      word-break: break-all;
+      @include hover {
+        color: var(--color-pri);
+      }
+    }
+    .icon {
+      width: 1.6rem;
+      height: 1.6rem;
+      display: flex;
+      flex-shrink: 0;
+    }
+    .txt {
+      font-weight: 600;
+    }
+  }
+  &-row {
+    @include max(768px) {
+      --rg: 2.4rem;
+    }
+    > .col {
+      @include max(768px) {
+        width: 50%;
+      }
+    }
+  }
+}

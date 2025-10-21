@@ -1,0 +1,74 @@
+@use "../core/mixin" as *;
+@use "../core/font" as *;
+.t-title {
+  @include fz-32;
+  color: var(--color-pri);
+  text-wrap: pretty;
+  position: relative;
+  line-height: 1.2;
+  font-weight: 700;
+}
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  &.center {
+    text-align: center;
+    align-items: center;
+  }
+  &.white {
+    .t-title {
+      color: var(--color-white);
+    }
+    .b-tag {
+      --bg: rgba(255, 255, 255, 0.15);
+      --cl: #fff;
+      border: 0.1rem solid rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+.t-center {
+  text-align: center;
+}
+.c-tt {
+  color: var(--color-tt);
+}
+.fw-1 {
+  font-weight: 100;
+}
+
+.fw-2 {
+  font-weight: 200;
+}
+
+.fw-3 {
+  font-weight: 300;
+}
+
+.fw-5 {
+  font-weight: 500;
+}
+
+.fw-6 {
+  font-weight: 600;
+}
+
+.fw-7 {
+  font-weight: 700;
+}
+
+.fw-8 {
+  font-weight: 800;
+}
+
+.fw-b {
+  font-weight: bold;
+}
+
+.fsi {
+  font-style: italic;
+}
+
+.t-up {
+  text-transform: uppercase;
+}

@@ -1,0 +1,136 @@
+@use "../core/mixin" as *;
+@use "../core/font" as *;
+
+.hd {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: transparent;
+  transition: 0.5s ease-in-out;
+  height: var(--size-hd);
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
+  padding: 0 2.4rem;
+  @include max(1300px) {
+    padding: 0 1.2rem;
+  }
+  &.trans {
+    background: transparent;
+    --color-white: #fff;
+  }
+  &.sticky {
+    background: #f9f9f9;
+    --color-white: #242424;
+    @include min(1201px) {
+      --size-hd: 7rem;
+    }
+
+    .hd-action .t-link {
+      .icon {
+        filter: unset;
+      }
+    }
+    .hd-btn {
+      background: var(--color-pri);
+      color: #fff;
+      .ic {
+        filter: brightness(0) invert(1);
+      }
+    }
+  }
+  &-wrap {
+    height: 100%;
+  }
+  &-flex {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    height: 100%;
+    .col-left {
+      flex: 1;
+    }
+  }
+  &-group {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    @include max(1300px) {
+      gap: 1.2rem;
+    }
+  }
+  &-logo {
+    .custom-logo-link {
+      display: flex;
+      max-width: 23rem;
+      @include max(1200px) {
+        max-width: 20rem;
+      }
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+  &-action {
+    display: flex;
+    gap: 1.6rem;
+    align-items: center;
+    justify-content: flex-end;
+    .t-link {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      gap: 0.8rem;
+      flex-direction: column;
+      @include hover {
+        .txt {
+          color: var(--color-pri);
+        }
+      }
+      .icon {
+        width: 2.4rem;
+        height: 2.4rem;
+        display: flex;
+        filter: brightness(0) invert(1);
+      }
+      .txt {
+        font-size: 1.4rem;
+        font-weight: 300;
+        color: var(--color-white);
+        transition: 0.3s ease-in-out;
+      }
+    }
+    .b-group {
+      @include max(1201px) {
+        display: none;
+      }
+    }
+  }
+  &-btn {
+    padding: 1rem 1.6rem;
+    background: var(--color-white);
+    color: var(--color-pri);
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    @include max(1200px) {
+      padding: 0.6rem 0.8rem;
+    }
+    @include hover {
+      background: var(--color-sec);
+      color: var(--color-white);
+      .ic {
+        filter: brightness(0) invert(1);
+      }
+    }
+    .ic {
+      display: flex;
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+}

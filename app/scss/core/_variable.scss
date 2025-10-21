@@ -1,0 +1,29 @@
+:root {
+  --size-hd: 9rem;
+  --color-pri: #d71920;
+  --color-sec: #051a53;
+  --color-tt: #333333;
+  --color-text: #242424;
+  --color-txt: #525252;
+  --color-black: #000;
+  --color-white: #fff;
+  --cl-border: rgba(36, 36, 36, 0.2);
+  --rs: 1.6rem;
+  // distance section
+  --pd-sc: 8rem;
+
+  @media (max-width: 1200px) {
+    --pd-sc: 4rem;
+    --size-hd: 6rem;
+    --rs: 0.8rem;
+  }
+}
+
+//Responsive
+$res-mobile: 1199px;
+$res-mobile-min: 1200px;
+$mobile: 500px;
+//Distance
+$radius: 0.6rem;
+// cubic
+$cubic: cubic-bezier(0.72, 0.04, 0.49, 0.82);

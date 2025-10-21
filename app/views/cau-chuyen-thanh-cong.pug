@@ -1,0 +1,23 @@
+extends layout/layout
+
+block vars
+    -title = ''
+    -bodyClass = 'page-story'
+    -hdClass = 'hd-second'
+
+block container
+   .bn-st 
+      .container
+         .b-wrap
+            +breadCrumb(["Câu chuyện thành công"])
+            .b-head
+               h1.title.t-center
+                  | NHỮNG CÂU CHUYỆN THÀNH CÔNG
+            .b-img
+      .b-sw.slideFade
+         +Swiper()
+            each i,index in Array(3)
+               .col.swiper-slide
+                  .b-img 
+                     .inner 
+                        +img(`bn-st${index+1}.jpg`)

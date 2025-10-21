@@ -1,0 +1,18 @@
+extends layout/layout
+
+block vars
+    -title = ''
+    -bodyClass = 'page-template'
+
+block container
+   .ss-pd
+      .container 
+         .d-flex.d-col.gap20
+            .d-flex.gap20
+               +Btn("Send Us")
+               +Btn("Send Us","","trans")
+               +Btn("Send Us","","white")
+               +SwiperControl()
+            +title("Lorem ipsum dolor sit amet consectetur adipisicing elit.","KEY BENEFITS")
+            +title("Lorem ipsum dolor sit amet consectetur adipisicing elit.","KEY BENEFITS","center")
+            +PageNumber()

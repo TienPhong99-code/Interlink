@@ -1,0 +1,116 @@
+header.hd(class=hdClass)
+   .hd-wrap
+      .hd-flex 
+         .col-left 
+            .hd-group 
+               .hd-logo 
+                  a(href="").custom-logo-link
+                     +img("logo.png")
+               .hd-nav 
+                  .menu-nav
+                     ul.menu-list
+                        li.menu-item
+                           a(href="").menu-link
+                              | Dịch vụ
+                        li.menu-item
+                           a(href="").menu-link
+                              | Về Interlink
+                        li.menu-item
+                           a(href="").menu-link
+                              | Chuyên môn
+                        li.menu-item
+                           a(href="").menu-link
+                              | Tin tức
+         .col-right
+            .hd-action.gap16.a-center
+               .b-group.d-flex.gap16.a-center
+                  a(href="").t-link
+                     span.icon 
+                        +img("hd-ic (1).svg")
+                     span.txt Contact us
+                  a(href="").t-link
+                     span.icon 
+                        +img("hd-ic (2).svg")
+                     span.txt Tracking
+                  a(href="").t-link
+                     span.icon 
+                        +img("hd-ic (3).svg")
+                     span.txt Get a Quote
+               .b-gr.d-flex.gap16.a-center
+                  +Lang()
+                  .hd-btn#hamburger
+                     span.txt MENU
+                     span.ic
+                        +img("hd-menu-ic.svg")
+   .mobile-overlay
+   .mobile
+      .mobile-close
+         i.fa-solid.fa-xmark.icon
+      .mobile-con
+         .mobile-wr
+            .mobile-nav
+               .menu-nav
+                  ul.menu-list
+                     li.menu-item.dropdown
+                        a.menu-link(href='')
+                           | Dịch vụ
+                        ul.menu-list
+                           li.menu-item
+                              a.menu-link(href='')
+                                 | Vận chuyển đường biển
+                           li.menu-item
+                              a.menu-link(href='')
+                                 | Vận chuyển hàng không
+                           li.menu-item
+                              a.menu-link(href='')
+                                 | Dịch vụ hải quan
+                           li.menu-item
+                              a.menu-link(href='')
+                                 | Cho thuê kho bãi
+                           li.menu-item
+                              a.menu-link(href='')
+                                 | Hàng nhà Chùa
+                           li.menu-item
+                              a.menu-link(href='')
+                                 | Vận chuyển nội địa
+                           li.menu-item
+                              a.menu-link(href='')
+                                 | Dịch vụ chuyển dọn
+                           li.menu-item
+                     li.menu-item
+                        a.menu-link(href='')
+                           | Interlink
+                     li.menu-item
+                        a.menu-link(href='')
+                           | Chuyên môn
+                     li.menu-item
+                        a.menu-link(href='')
+                           | Tin tức
+         .mobile-content 
+            .mobile-cn 
+               a(href="").mb-link
+                  span.txt  Logistics Knowlegde
+                  span.icon 
+                     +img("hd-ic (4).svg")
+               a(href="").mb-link
+                  span.txt  Careers
+                  span.icon 
+                     +img("hd-ic (5).svg")
+               a(href="").mb-link
+                  span.txt  Contact Us
+                  span.icon 
+                     +img("hd-ic (6).svg")
+            .mobile-lang.t14
+               .d-flex.j-end
+                  a(href="").t-link.active VN 
+                  a(href="").t-link EN
+            .mobile-footer
+               .d-flex.j-center.gap40
+                  a(href="").mb-link
+                     span.txt.fw-6  0937 48 18 98
+                     span.icon 
+                        +img("ic-phone.svg")
+                  a(href="").mb-link
+                     span.txt.fw-6  info@interlink.com.vn
+                     span.icon 
+                        +img("ic-mail.svg")

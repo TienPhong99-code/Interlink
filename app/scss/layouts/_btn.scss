@@ -1,0 +1,96 @@
+@use "../core/mixin" as *;
+@use "../core/font" as *;
+.btn {
+  //   --iz: 5.6rem;
+  @include mid-flex;
+  width: fit-content;
+  text-align: center;
+  cursor: pointer;
+  @include transition(0.3s, ease-in-out);
+  overflow: hidden;
+  position: relative;
+  background: var(--color-pri);
+  gap: 0.6rem;
+  color: var(--color-white);
+  font-size: 1.4rem;
+  font-weight: 600;
+  min-height: 4rem;
+  padding: 0.6rem 2.4rem;
+  &.second {
+    background: var(--color-pri);
+    color: var(--color-white);
+    &::after {
+      background: var(--color-sec);
+    }
+  }
+  &.opa {
+    background: rgba(87, 170, 49, 0.1);
+    color: var(--color-pri);
+    &::after {
+      background: var(--color-pri);
+    }
+  }
+
+  &.trans {
+    background: transparent;
+    border: 0.1rem solid var(--color-pri);
+    color: var(--color-pri);
+  }
+
+  &.white {
+    background: var(--color-white);
+    color: var(--color-pri);
+  }
+  &.m-left {
+    margin-left: auto;
+  }
+
+  @include max(1200px) {
+    font-size: 1.4rem;
+    gap: 0.8rem;
+  }
+  @include max(768px) {
+    padding: 0.6rem 1.2rem;
+    min-height: 3rem;
+  }
+
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  .icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    @include mid-flex;
+    flex-shrink: 0;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+    border-radius: inherit;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: var(--color-sec);
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  @include hover {
+    color: var(--color-white);
+
+    &::after {
+      left: 0;
+      width: 100%;
+    }
+  }
+
+  &.center {
+    margin: 0 auto;
+  }
+}

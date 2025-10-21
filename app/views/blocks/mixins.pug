@@ -1,0 +1,226 @@
+mixin Btn(text, type, classCustom,icon="fa-light fa-arrow-right icon")
+    if(!classCustom)
+        if(type == "button")
+            button.btn(type="submit",class=classCustom)
+                span.inner #{text}
+                i(class=icon)
+        else
+            a.btn(href="",class=classCustom)
+                span.inner #{text}
+                i(class=icon)
+    else 
+        if(type == "button")
+            button.btn(type="submit",class=classCustom)
+                span.inner #{text}
+                i(class=icon)
+        else
+            a.btn(href="", class=classCustom)
+                span.inner #{text}
+                i(class=icon)
+mixin PageNumber 
+    ul.page-numbers
+        li 
+            a.prev.page-numbers(href="")
+                i.fa.fa-angle-left
+        li
+            span.page-numbers.current   
+                | 1
+        li
+            a.page-numbers(href="")   
+                | 2
+        li 
+            span.page-numbers.dot 
+                |...
+        li
+            a.page-numbers(href="")   
+                | 10
+        li 
+            a.next.page-numbers(href="")
+                i.fa.fa-angle-right
+mixin breadCrumb(arr)
+  .breadcrumb 
+      ul.breadcrumb-list
+         li.breadcrumb-item(data-aos="fade-right")
+            a.breadcrumb-link(href="")
+               | Trang chủ
+         each txt in arr
+            li.breadcrumb-item(data-aos="fade-right")
+               a.breadcrumb-link(href="") #{txt}
+mixin pagination(classCustom)
+    .swiper-pagination(class=classCustom)
+
+mixin CountDown(time,customClass)
+   .countDownJs(class= customClass)
+      .countdown(data-time=time) 
+         .countdown-it.date
+         .countdown-it.hour
+         .countdown-it.minute
+         .countdown-it.second
+mixin Count()
+   .count 
+      .count-btn.count-minus 
+         i.fas.fa-minus.icon
+      input(type="text", class="count-input", max="999", min="0", value="1", hidden)
+      p.count-number 1
+      .count-btn.count-plus 
+         i.fas.fa-plus.icon
+mixin SwiperControl(customClass)
+    .swiper-control(class= customClass) 
+      .swiper-control-btn.swiper-prev 
+          i.fa-light.fa-arrow-left
+      .swiper-control-btn.swiper-next 
+          i.fa-light.fa-arrow-right
+mixin Swiper(customClass)
+   .swiper-container 
+      .swiper.rows 
+         .swiper-wrapper 
+            block
+mixin img(name)
+  img(src="./assets/images/" + name, alt="")
+mixin popup(classCustom="",id="")
+   .popup(class=classCustom data-popup-id= id)
+      .popup-overlay
+      .popup-main
+         .popup-main-wrapper
+            .popup-over
+               .popup-wrapper
+                  block
+         .popup-close
+            i.fas.fa-times.icon
+mixin title(text,title,classCustom)
+   .head(class=classCustom)
+      span.txt.c-sec.t18 #{text}
+      h2.t-title #{title}
+mixin Checker(type,shape,text,classCustom,name,num)
+   if (shape == "circle")
+      label.checker(class=classCustom) 
+         input(type=type, name=name)
+         span.circle 
+         span.txt #{text}
+            if(num)
+               span.num #{num}
+   if (shape == "checkbox") 
+      label.checker(class=classCustom) 
+         input(type=type , name=name)
+         span.sqr 
+         span.txt #{text}
+            if(num)
+               span.num #{num}
+   if (shape == "tag")
+      label.checker(class=classCustom) 
+         input(type=type, name=name)
+         span.txt #{text}
+            if(num)
+               span.num #{num}
+mixin news()
+   .news-it 
+      a(href="").hidden-link 
+      .b-img 
+         .inner
+            +img("news-img.jpg")
+      .b-ctn 
+         .b-top 
+            span.txt By Mona 
+            span.txt 22/01/2024
+         .b-gr
+            h3.t-text 
+               | Lorem Ipsum is simply dummy text of the printing and type
+            .t-des 
+               p 
+                  | Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+mixin Lang()
+  .hd-lg 
+    .hd-lg-item 
+      span.txt ENG
+      span.ic
+        i.fas.fa-chevron-down
+    .hd-lg-drop 
+      a(href="").hd-lg-item 
+        span.txt VN
+mixin like()
+   .heart-container.likeJs
+      .svg-container
+         svg.svg-outline(viewbox='0 0 24 24' xmlns='http://www.w3.org/2000/svg')
+            path(d="M20.1028 12.5717L12.6028 19.9997L5.10284 12.5717C4.60815 12.0903 4.21848 11.5117 3.95839 10.8723C3.69829 10.2329 3.5734 9.54664 3.59158 8.85662C3.60975 8.1666 3.7706 7.48782 4.064 6.86303C4.35739 6.23823 4.77698 5.68094 5.29633 5.22627C5.81568 4.77159 6.42355 4.42938 7.08165 4.22117C7.73976 4.01296 8.43385 3.94327 9.12021 4.01649C9.80657 4.08971 10.4703 4.30425 11.0697 4.64659C11.6691 4.98894 12.1911 5.45169 12.6028 6.00569C13.0164 5.45571 13.539 4.99701 14.1379 4.65829C14.7369 4.31958 15.3993 4.10814 16.0838 4.03721C16.7682 3.96628 17.4599 4.03739 18.1156 4.24608C18.7713 4.45477 19.3769 4.79656 19.8944 5.25005C20.4119 5.70354 20.8303 6.25897 21.1233 6.88158C21.4163 7.50419 21.5776 8.18057 21.5971 8.8684C21.6167 9.55622 21.4941 10.2407 21.237 10.8789C20.9798 11.5172 20.5937 12.0955 20.1028 12.5777" fill="#fff" stroke="#F05B64" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+         svg.svg-filled(viewbox='0 0 24 24' xmlns='http://www.w3.org/2000/svg')
+            path(path d="M20.1028 12.5717L12.6028 19.9997L5.10284 12.5717C4.60815 12.0903 4.21848 11.5117 3.95839 10.8723C3.69829 10.2329 3.5734 9.54664 3.59158 8.85662C3.60975 8.1666 3.7706 7.48782 4.064 6.86303C4.35739 6.23823 4.77698 5.68094 5.29633 5.22627C5.81568 4.77159 6.42355 4.42938 7.08165 4.22117C7.73976 4.01296 8.43385 3.94327 9.12021 4.01649C9.80657 4.08971 10.4703 4.30425 11.0697 4.64659C11.6691 4.98894 12.1911 5.45169 12.6028 6.00569C13.0164 5.45571 13.539 4.99701 14.1379 4.65829C14.7369 4.31958 15.3993 4.10814 16.0838 4.03721C16.7682 3.96628 17.4599 4.03739 18.1156 4.24608C18.7713 4.45477 19.3769 4.79656 19.8944 5.25005C20.4119 5.70354 20.8303 6.25897 21.1233 6.88158C21.4163 7.50419 21.5776 8.18057 21.5971 8.8684C21.6167 9.55622 21.4941 10.2407 21.237 10.8789C20.9798 11.5172 20.5937 12.0955 20.1028 12.5777" fill="#F05B64")
+         svg.svg-celebrate(width='100' height='100' xmlns='http://www.w3.org/2000/svg')
+            polygon(points='10,10 20,20')
+            polygon(points='10,50 20,50')
+            polygon(points='20,80 30,70')
+            polygon(points='90,10 80,20')
+            polygon(points='90,50 80,50')
+            polygon(points='80,80 70,70')
+mixin form()
+   section.sec-hct.ss-pd
+      .hct-bg 
+         +img("hct-bg.jpg")
+      .container 
+         .hct
+            .hct-wrap 
+               .hct-row.row 
+                  .col.col-6
+                     .hct-panel 
+                        .head 
+                           h2.t-title LIÊN HỆ
+                        .t-des.c-txt
+                           p 
+                              | Chúng tôi cam kết
+                              br 
+                              | sẽ phản hồi tất cả những yêu cầu trong vòng 24h làm việc
+                        a(href="").b-phone.iwt 
+                           span.icon 
+                              +img("ic-phone.svg")
+                           span.txt 0937 48 18 98
+                  .col.col-6
+                     .hct-form
+                        form(action="")
+                           .form-list.row 
+                              .col.form-ip 
+                                 span.text Họ và Tên
+                                 input(type="text" placeholder="Nhập họ và tên")
+                              .col.col-6.form-ip 
+                                 span.text Email
+                                 input(type="text" placeholder="Nhập họ và tên")
+                              .col.col-6.form-ip 
+                                 span.text Số điện thoại
+                                 input(type="text" placeholder="Nhập số điện thoại")
+                              .col.form-ip 
+                                 span.text Loại dịch vụ
+                                 .b-select 
+                                    select(name="").re-select-main
+                                       option(value="") Chọn loại dịch vụ
+                                       option(value="") Chọn loại dịch vụ
+                              .col.form-ip 
+                                 span.text Nội dung
+                                 textarea(name="" placeholder="Nhập nội dung")
+                           .b-submit 
+                              +Btn("XÁC NHẬN","submit","m-left white")
+mixin bn()
+   .bnh 
+      .bnh-wrap 
+         .bnh-slider.slideHome
+            .b-sw.posi-rl 
+               +Swiper()
+                  each i,index in Array(2)
+                     .swiper-slide.col 
+                        .bnh-item 
+                           .bnh-img 
+                              +img(`bnh-img (${index + 1}).jpg`)
+                           .container 
+                              .bnh-panel 
+                                 .b-head 
+                                    span.txt Giải pháp Logistic toàn diện 
+                                    span.text KẾT NỐI TOÀN CẦU VẬN HÀNH TỐI ƯU 
+                                 .b-des 
+                                    p 
+                                       | Interlink giúp doanh nghiệp kiểm soát chuỗi cung ứng, tối ưu chi phí vận chuyển quốc tế và nội địa, với đội ngũ chuyên gia & công nghệ hiện đại
+                                 .b-btn.d-flex 
+                                    +Btn("YÊU CẦU BÁO GIÁ","","")
+                                    +Btn("TƯ VẤN MIỄN PHÍ","","trans")
+               .bnh-control.swiper-control
+                  .swiper-control-btn.swiper-prev
+                     i.fa-light.fa-arrow-left
+                  +pagination("bnh-pagi")
+                  .swiper-control-btn.swiper-next
+                     i.fa-light.fa-arrow-right

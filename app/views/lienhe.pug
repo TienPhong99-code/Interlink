@@ -1,0 +1,55 @@
+extends layout/layout
+
+block vars
+    -title = ''
+    -bodyClass = 'page-contact'
+    -hdClass = 'trans'
+
+block container
+   .bnp 
+      .bnp-wrap 
+         .bnp-img 
+            +img("bnp-lh.jpg")
+         .bnp-breadcrumb 
+            +breadCrumb(["Kiến thức"])
+   section.sec-ctm 
+      .container 
+         .ctm
+            .ctm-wrap 
+               .ctm-row.row 
+                  .col.col-5
+                     .ctm-img 
+                        .inner 
+                           +img("ctm-img.jpg")
+                  .col.col-7
+                     .ctm-form 
+                        .b-head 
+                           +title("","LIÊN HỆ")
+                           .t-des.mt-12
+                              p 
+                                 | Chúng tôi cam kết sẽ phản hồi tất cả những yêu cầu 
+                                 br
+                                 span.fw-7 trong vòng 24h làm việc
+                        .b-form 
+                           form(action="")
+                              .form-list.row 
+                                 .col.form-ip 
+                                    input(type="text" placeholder="Họ và tên")
+                                 .col.form-ip.col-6 
+                                    input(type="text" placeholder="Nhập email")
+                                 .col.form-ip.col-6 
+                                    input(type="text" placeholder="Nhập số điện thoại")
+                                 .col.form-ip 
+                                    .b-select 
+                                       select(name="" data-placeholder="Chọn dịch vụ").re-select-main
+                                          option(value="")
+                                          option(value="a") Dịch vụ 1
+                                          option(value="b") Dịch vụ 2
+                                 .col.form-ip 
+                                    textarea(placeholder="Nội dung liên hệ")
+                              .b-submit 
+                                 +Btn("Xác nhận","button","full")
+   .ctmap.ss-pd-t 
+      .ctmap-wrap 
+         .inner
+            iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.426230296175!2d106.75263437558392!3d10.778630759152023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f36291a8293%3A0x2dfd314ef0fc115a!2zQ8OUTkcgVFkgQ-G7lCBQSOG6pk4gSU5URVJMSU5L!5e0!3m2!1svi!2s!4v1761039907914!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade")

@@ -1,0 +1,197 @@
+extends layout/layout
+
+block vars
+    -title = ''
+    -bodyClass = 'page-home'
+
+block container
+   +bn()
+   section.sec-hbi.ss-pd-t
+      .hbi-container 
+         .hbi 
+            .hbi-wrap 
+               .hbi-flex 
+                  .col-left 
+                     .hbi-slider.slideSw
+                        .b-sw.posi-rl
+                           .swiper-container 
+                              .swiper.rows(dir="rtl")
+                                 .swiper-wrapper 
+                                    each i,index in Array(3)
+                                       .swiper-slide.col 
+                                          .hbi-item 
+                                             .b-img 
+                                                .inner 
+                                                   +img("hbi-img.jpg")
+                                             .b-ctn 
+                                                span.icon 
+                                                   +img("hbi-ic.svg")
+                                                span.t-text Được đồng hành như một đối tác chiến lược
+                                                a(href="").t-link Tìm hiểu thêm
+                           +SwiperControl("hbi-control posi midle")
+                  .col-right 
+                     .hbi-panel 
+                        .b-head
+                           .t-head 
+                              span.t-num 23
+                              span.dcor +
+                           p.c-sec.t32.fw-7
+                              span.c-pri Năm 
+                              | kinh nghiệm
+                        .b-ctn 
+                           .b-row.row 
+                              .col.col-6 
+                                 .hbi-des 
+                                    p.fw-7
+                                       | Hơn hai thập kỷ trong ngành giúp chúng tôi dự đoán và xử lý trước mọi tình huống, đảm bảo quy trình của bạn diễn ra mượt mà, không gián đoạn.
+                              .col.col-6 
+                                 .hbi-des 
+                                    p 
+                                       | Đội ngũ chuyên gia giàu kinh nghiệm sẽ phân tích kỹ từng yêu cầu và đề xuất giải pháp tối ưu nhất để mang lại hiệu quả cao nhất cho bạn
+                           .b-btn 
+                              +Btn("Tìm hiểu thêm","","b-link")
+      .hbi-bot
+         | INTERLINK
+   section.sec-ser.ss-pd 
+      .ser
+         .ser-wrap
+            .ser-thumb.slideLoop
+               .b-sw 
+                  .swiper-container 
+                     .swiper.rows(dir="rtl")
+                        .swiper-wrapper 
+                           each i,index in Array(4)
+                              .swiper-slide.col 
+                                 .sers-it
+                                    .b-img 
+                                       .inner 
+                                          +img("ser-img.jpg")
+                                    .b-ctn 
+                                       span.t-text Vận chuyển nội địa
+                                       a(href="").t-link Tìm hiểu thêm
+   section.sec-hbr.ss-pd
+      .container 
+         .hbr 
+            .hbr-wrap
+               .hbr-head.mb-40
+                  .b-head.t-center
+                     span.txt.c-sec.t18 Thành viên của các hiệp hội
+                     .head 
+                        h2.t-title 
+                           | INTERLINK LÀ THÀNH VIÊN & ĐỐI TÁC
+                           br
+                           | CỦA CÁC HIỆP HỘI, CƠ QUAN, TỔ CHỨC UY TÍN
+               .hbr-block
+                  .hbr-slider.slideSw
+                     +Swiper()
+                        each i,index in Array(5)
+                           .swiper-slide.col-3.col
+                              .hbr-item 
+                                 .b-img 
+                                    .inner 
+                                       +img("hbr-img.png")
+   section.sec-fb.ss-pd
+      .container 
+         .fb-wrap 
+            .fb-head.mb-40
+               .d-flex.a-center.j-bw 
+                  .b-head 
+                     span.txt.c-sec.t18 Khách hàng là minh chứng cho uy tín của Interlink
+                     +title("KHÁCH HÀNG CỦA CHÚNG TÔI")
+                  +Btn("Liên hệ ngay","","")
+            .fb-block 
+               .fb-slider.slideSw
+                  .b-sw 
+                     +Swiper()
+                        each i,index in Array(5)
+                           .swiper-slide.col-4.col
+                              .fb-item 
+                                 .b-img 
+                                    .inner 
+                                       +img("fb-img.jpg")
+                                 .b-ctn 
+                                    .b-star 
+                                       each i,index in Array(5)
+                                          +img("ic-star.svg")
+                                    .b-des 
+                                       p 
+                                          | Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.
+                                    .b-author 
+                                       span.txt.fw-6 Van Nguyen
+                                       span.txt.fw-4.t14 Founder
+   section.sec-case.ss-pd 
+      .container 
+         .case 
+            .case-wrap 
+               .case-head 
+                  .d-flex.a-center.j-bw 
+                     .b-head
+                        span.txt.c-sec.t18 Câu chuyện thành công: Interlink đã giúp họ như thế nào ?
+                        +title("CASE STUDY THỰC TẾ")
+                     +Btn("XEM THÊM","","")
+               .case-block 
+                  .case-list 
+                     each i,index in Array(2)
+                        .case-item 
+                           .b-panel 
+                              .t-head 
+                                 .t-box
+                                    span.txt CASE
+                                    span.t-num 01
+                                 h3.t-text 
+                                    a(href="")  Xử lý 1.000 CBM hàng siêu trường đi Úc trong 3 ngày
+                              .t-des 
+                                 p 
+                                    | Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.
+                              +Btn("XEM THÊM","","blink")
+                           .b-img
+                              .inner 
+                                 +img("case-img (1).jpg")
+   section.sec-hnews.ss-pd 
+      .container 
+         .hnews
+            .hnews-wrap    
+               .hnews-row.row 
+                  .col.col-4 
+                     .hnews-head 
+                        span.c-sec.t18 Tin tức vận tải 
+                        +title("PR CENTER")
+                        .mt-24
+                           +Btn("XEM THÊM","","")
+                  .col.col-8
+                     .hnews-panel 
+                        .hnews-list 
+                           each i,index in Array(5)
+                              .news-item
+                                 .box-time 
+                                    span.day 12
+                                    span.t-txt 08-2025
+                                 .box-ctn 
+                                    span.txt By Interlink
+                                    h3.t-text 
+                                       a(href="")
+                                          |  Giá Cước Container Tuyến Châu Á – Bắc Mỹ Tiếp Tục Giảm Mạnh Dù Hãng Tàu Cắt Chuyến
+   section.sec-env 
+      .env 
+         .container 
+            .env-head.mb-40
+               .t-head 
+                  span.txt.c-sec.t18 Ghi dấu hoạt động tại Interlink 
+                  +title("CÔNG TY TẠI INTERLINK")
+               .tab-list 
+                  a(href="").t-link
+                     | KỈ NIỆM 
+                  a(href="").t-link
+                     | KỈ NIỆM 
+                  a(href="").t-link
+                     | KỈ NIỆM 
+                  a(href="").t-link.active
+                     | KỈ NIỆM 
+         .env-gal 
+            .env-gal-list.row 
+               each i,index in Array(12)
+                  .col.col-3
+                     .env-gal-item
+                        .inner(data-fancybox data-src=`./assets/images/env (${index + 1}).jpg`)
+                           +img(`env (${index + 1}).jpg`)
+   +form()

@@ -1,0 +1,52 @@
+@use "../core/mixin" as *;
+@use "../core/font" as *;
+
+.breadcrumb {
+  &-wrapper {
+  }
+
+  &-list {
+    @include flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    overflow-x: auto;
+    gap: 0.8rem;
+    &::-webkit-scrollbar {
+      height: 0;
+    }
+  }
+
+  &-item {
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-weight: 400;
+    color: var(--color-text);
+    transition: 0.3s ease-in-out;
+    &:not(:first-child) {
+      &::before {
+        display: inline-block;
+        content: "\f054";
+        font-family: "Font Awesome 5 Pro";
+        vertical-align: middle;
+        position: relative;
+      }
+    }
+
+    &:last-child {
+      color: var(--color-text);
+      pointer-events: none;
+    }
+
+    @include hover {
+      color: var(--color-pri);
+    }
+  }
+
+  &-link {
+    //  color: var(--color-white);
+    transition: 0.2s ease-in-out;
+  }
+}

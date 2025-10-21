@@ -1,0 +1,29 @@
+extends layout/layout
+
+block vars
+    -title = ''
+    -bodyClass = 'page-service'
+    -hdClass = 'trans'
+
+block container
+   +bn()
+   section.sec-service.ss-pd
+      .container 
+         .service 
+            .service-wrap 
+               .service-head.mb-40
+                  +title("Chúng tôi đáp ứng mọi nhu cầu logistics của bạn","DỊCH VỤ CHÍNH")
+                  .t-des 
+                     p 
+                        | Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.
+               .service-block 
+                  .service-list.row
+                     each i,index in Array(8)
+                        .col.col-4
+                           .service-item
+                              a(href="").hidden-link
+                              .b-inner 
+                                 .inner 
+                                    +img('service-img.jpg')
+                                 h3.t-text Vận Chuyển Đường Biển
+   +form()

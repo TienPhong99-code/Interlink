@@ -1,0 +1,59 @@
+extends layout/layout
+
+block vars
+    -title = ''
+    -bodyClass = 'page-faq'
+    -hdClass = 'trans'
+
+block container
+   +bn()
+   section.sec-faq.ss-pd
+      .container 
+         .faq
+            .faq-wrap 
+               .faq-head 
+                  +title("Bạn hỏi, Interlink trả lời","KIẾN THỨC NGÀNH")
+               .faq-block 
+                  .qa-wrapper
+                     .qa-list.collapse-block
+                        each i,index in Array(4)
+                           .qa-item.collapse-item
+                              .qa-heading.collapse-head
+                                 p.title  General regulations of VJlink
+                                 span.icon
+                              .qa-body.collapse-body
+                                 .qa-content 
+                                    ul 
+                                       li 
+                                          | In case you do not register for the tour directly but someone else does, please learn carefully about the program from the person who registered for you.
+                                       li 
+                                          | In case you do not register for the tour directly but someone else does, please learn carefully about the program from the person who registered for you.
+                                       li 
+                                          | The company is not responsible for any disputes that may arise.
+                                       li 
+                                          | Guests aged 70 and over must have a medical certificate from a doctor and commit to being healthy enough to travel and take responsibility for their own health issues. Elderly travelers must be accompanied by a relative under 60 years old (in good health).
+   section.sec-news.ss-pd
+      .container 
+         .news 
+            .news-wrap
+               .news-head.mb-40
+                  +title("TIN TỨC & BLOG","TIN TỨC INTERLINK")
+               .news-block 
+                  .news-list.row
+                     each i,index in Array(9)
+                        .col.col-4 
+                           +news()
+                  +PageNumber()
+   section.sec-news.ss-pd
+      .container 
+         .news 
+            .news-wrap
+               .news-head.mb-40
+                  +title("TIN TỨC & BLOG","TIN TỨC NGÀNH LOGISTIC")
+               .news-block 
+                  .news-list.row
+                     each i,index in Array(6)
+                        .col.col-4 
+                           +news()
+                  +PageNumber()
+   +form()

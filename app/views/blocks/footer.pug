@@ -1,0 +1,98 @@
+footer.ft 
+   .container 
+      .ft-wrap 
+         .ft-head 
+            .ft-head 
+               .ft-logo 
+                  a(href="").custom-logo-link
+                     +img("logo.png")
+               .t-text PARTNERSHIP TO SUCCESS
+               .ft-sc 
+                  span.txt THEO DÕI CHÚNG TÔI TẠI 
+                  .mxh-social
+                     each i,index in Array(6)
+                        a(href="").i-link
+                           +img(`mxh-link (${index + 1}).svg`)
+            .ft-address
+               .ft-address-item.iwt 
+                  span.icon 
+                     +img("ic-location.svg")
+                  .t-gr
+                     span.txt.fw-7.c-sec Trụ sở chính - Thành phố Hồ Chí Minh 
+                     a(href="").t-link.txt Số 42 - 42A, Đường 57-TML, Phường Thạnh Mỹ Lợi, TP Thủ Đức, TP Hồ Chí Minh
+               .ft-address-item.iwt 
+                  span.icon 
+                     +img("ic-location.svg")
+                  .t-gr
+                     span.txt.fw-7.c-sec Chi nhánh Đà Nẵng:
+                     a(href="").t-link.txt
+                        | Số 2 đường 30-4, Phường Hòa Cường Bắc, Quận Hải Châu, Thành phố Đà Nẵng
+               .ft-address-item.iwt 
+                  span.icon 
+                     +img("ic-location.svg")
+                  .t-gr 
+                     span.txt.fw-7.c-sec Chi nhánh Hải Phòng:
+                     a(href="").t-link.txt 2/16D Trung Hành 5, Lê Hồng Phong,Đằng Lâm, Hải An, Thành phố Hải Phòng
+            .ft-body 
+               .ft-row.row 
+                  .col.col-3
+                     .ft-box 
+                        span.t-head Dịch vụ
+                        .ft-nav 
+                           ul.menu 
+                              li
+                                 a(href="") Vận chuyển đường biển
+                              li
+                                 a(href="") Vận chuyển hàng không
+                              li
+                                 a(href="") Dịch vụ hải quan
+                              li
+                                 a(href="") Cho thuê kho bãi
+                              li
+                                 a(href="") Hàng nhà Chùa
+                              li
+                                 a(href="") Vận chuyển nội địa
+                              li 
+                                 a(href="") Dịch vụ chuyển dọn
+                  .col.col-3
+                     .ft-box 
+                        span.t-head Interlink
+                        .ft-nav 
+                           ul.menu 
+                              li
+                                 a(href="") Về Interlink
+                              li
+                                 a(href="") Tầm nhìn & Sứ mệnh
+                              li
+                                 a(href="") Thông điệp CEO
+                              li
+                                 a(href="") Lịch sử
+                              li
+                                 a(href="") Giải thưởng & Chứng nhận
+                  .col.col-3
+                     .ft-box 
+                        span.t-head Chuyên môn
+                        .ft-nav 
+                           ul.menu 
+                              li
+                                 a(href="") Nghiên cứu điển hình
+                              li
+                                 a(href="") Dự án
+                        .ft-cn 
+                           a(href="").t-link
+                              span.icon 
+                                 +img("ic-phone.svg")
+                              span.txt 0937 48 18 98
+                           a(href="").t-link
+                              span.icon 
+                                 +img("ic-mail.svg")
+                              span.txt info@interlink.com.vn
+                  .col.col-3
+                     .ft-box 
+                        span.t-head Tin tức
+                        .ft-nav 
+                           ul.menu 
+                              li
+                                 a(href="") Tin tức ngành
+                              li
+                                 a(href="") Tin Interlink

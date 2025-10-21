@@ -1,0 +1,41 @@
+@use "../core/mixin" as *;
+@use "../core/font" as *;
+
+.hd-burger {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100rem;
+  @include mid-flex;
+  background: #e5e7eb;
+  cursor: pointer;
+  @include min(1201px) {
+    display: none;
+  }
+  &.active .line:nth-child(1) {
+    transform: translate3d(0, 0.7rem, 0) rotate(45deg) !important;
+  }
+
+  &.active .line:nth-child(3) {
+    transform: translate3d(0, -0.7rem, 0) rotate(135deg) !important;
+    width: 2.4rem;
+  }
+
+  &.active .line:nth-child(2) {
+    opacity: 0;
+  }
+}
+
+.burger {
+  position: relative;
+}
+
+.burger .line {
+  width: 2.4rem;
+  height: 0.2rem;
+  border-radius: 0.4rem;
+  background: #274c12;
+  display: block;
+  margin: 0.5rem 0;
+  transition: 0.3s ease-in-out;
+  transform-origin: 50% 50%;
+}

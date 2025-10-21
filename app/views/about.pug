@@ -1,0 +1,149 @@
+extends layout/layout
+
+block vars
+    -title = ''
+    -bodyClass = 'page-about'
+    -hdClass = 'trans'
+
+block container
+   +bn()
+   section.sec-abi.ss-pd 
+      .container 
+         .abi 
+            .abi-wrap 
+               .abi-head
+                  +title("Chúng tôi đáp ứng mọi nhu cầu logistics của bạn","VỀ INTERLINK")
+                  .t-des 
+                     p
+                        | Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.
+               .abi-block 
+                  .abi-list.row 
+                     each i,index in Array(6)
+                        .col.col-4 
+                           .abi-it 
+                              span.text Khởi điểm
+                              span.icon 
+                                 +img(`ic-abi (${index + 1}).svg`)
+                              .t-num 
+                                 span.countNum 18270 
+                                 |  m2
+                              span.txt Năm
+      .hbi-bot
+         | INTERLINK
+   .abv 
+      .abv-img 
+         .inner 
+            +img("abv-img.jpg")
+         a(href="").icon
+            +img("ic-play.svg")
+   section.sec-abm.ss-pd 
+      .container 
+         .abm 
+            .abm-wrap 
+               .abm-head.mb-40
+                  +title("Interlink đã khẳng định vị thế trên thị trường","TẦM NHÌN & SỨ MỆNH")
+               .abm-block 
+                  .abm-list
+                     each i,index in Array(4)
+                        .abm-it 
+                           .b-panel 
+                              h3.t-head 
+                                 | Tầm nhìn
+                              .t-des 
+                                 p 
+                                    | Đến năm 2030: Interlink sẽ nằm trong Top 10 công ty logistics hàng đầu Việt Nam và trở thành thương hiệu số 1 trong tâm trí khách hàng về chất lượng và sự tin cậy
+                           .b-img 
+                              .inner 
+                                 +img("abm.jpg")
+   section.sec-abc 
+      .container 
+         .abc 
+            .abc-wrap 
+               .abc-head.t-center
+                  +title("Lời trân trọng và biết ơn từ Interlink","THÔNG ĐIỆP CEO")
+               .abc-block 
+                  .abc-row.row 
+                     .col.col-8 
+                        .abc-panel 
+                           .mona-content 
+                              p 
+                                 | Mọi nỗ lực trong hoạt động kinh doanh của chúng tôi đều dựa trên yêu cầu của khách hàng. Chúng tôi luôn đặt mình vào vị trí khách hàng để hiểu rõ mong muốn, nhu cầu, từ đó đem đến cho khách hàng những giải pháp tối ưu, hiệu quả & tiết kiệm.
+                              p 
+                                 | Chúng tôi luôn đặt ra và nỗ lực để đạt được mục tiêu cung cấp dịch vụ vượt trên mức mong đợi của khách hàng. Đây là động lực, là thách thức để Interlink không ngừng cải tiến, không ngừng phát triển nhằm đem lại sự tín nhiệm & hài lòng cho khách hàng.
+                              p 
+                                 | Với lợi thế đội ngũ nhân viên Interlink giàu kinh nghiệm, có năng lực chuyên môn cao, có tinh thần & thái độ phục vụ chuyên nghiệp, làm việc theo hệ thống quy trình luôn được cập nhật & cải tiến; cơ sở hạ tầng luôn được đầu tư nâng cấp giúp chúng tôi mang đến cho khách hàng những giải pháp tư vấn phù hợp, xây dựng quy trình làm việc rõ ràng theo nhu cầu riêng biệt của từng khách hàng. Nhờ đó, chúng tôi thực hiện công việc được suôn sẻ, hiệu quả & mang đến dịch vụ chất lượng ổn định cho khách hàng.
+                              p 
+                                 | Interlink quyết tâm & vững vàng trên con đường đã đặt ra “Nhiệm vụ thực thi an tâm & thành
+                     .col.col-4
+                        .abc-img 
+                           .inner 
+                              +img("abc-img.png")
+   section.sec-abh.ss-pd 
+      .container 
+         .abh 
+            .abh-wrap.slideSw
+               .abh-head.mb-40.d-flex.j-bw
+                  +title("Quá trình thành lập Interlink đến hiện tại","LỊCH SỬ HÌNH THÀNH")
+                  +SwiperControl()
+               .abh-block 
+                  .abh-slider 
+                     .b-sw 
+                        +Swiper()
+                           each i,index in Array(4)
+                              .swiper-slide.col.col-4 
+                                 .abh-it 
+                                    .b-img 
+                                       .inner 
+                                          +img("abh-img.jpg")
+                                    .b-ctn 
+                                       .t-head 2002
+                                       p.t-des 
+                                          | Thành lập Interlink
+   section.sec-hbr.ss-pd
+      .container 
+         .hbr 
+            .hbr-wrap
+               .hbr-head.mb-40
+                  .b-head.t-center
+                     span.txt.c-sec.t18 Những thành tựu đã đạt được suốt hơn 20 năm Interlink hoạt động
+                     .head 
+                        h2.t-title 
+                           | CHỨNG NHẬN & GIẢI THƯỞNG
+                  .b-bot 
+                     | Chứng nhận
+               .hbr-block
+                  .hbr-slider.slideSw
+                     +Swiper()
+                        each i,index in Array(5)
+                           .swiper-slide.col-3.col
+                              .hbr-item 
+                                 .b-img 
+                                    .inner 
+                                       +img("hbr-img.png")
+                  .b-content 
+                     .mona-content 
+                        p 
+                           | Đến năm 2030, Interlink sẽ trở thành công ty cung ứng dịch vụ  Logistics tốt nhất tại Việt Nam, đồng thời đứng ở vị trí số một trong  tâm trí khách hàng.
+                        p 
+                           | Các giải thưởng & chứng nhận đạt được trong & ngoài nước  trong suốt 20 năm qua là minh chứng cho chất lượng dịch vụ & vị thế  của mình trong ngành logistics Việt Nam.
+            .hbr-wrap.hbr-reward
+               .hbr-head.mb-40
+                  .b-bot 
+                     | Giải thưởng
+               .hbr-block
+                  .hbr-slider.slideSw
+                     +Swiper()
+                        each i,index in Array(5)
+                           .swiper-slide.col-3.col
+                              .hbr-reward-item
+                                 span.num 2013
+                                 .b-img 
+                                    .inner 
+                                       +img("hbr-img-reward.jpg")
+                                 p.t-des Giải thưởng Thương hiệu
+                                    | được khách hàng lựa chọn
+                  .b-content 
+                     .mona-content
+                        p 
+                           | Interlink vinh dự nhận được rất nhiều giải thưởng trong quá trình phát  triển của mình. Nhưng điều đáng tự hào nhất vẫn là sự đồng hành win-win  cùng khách hàng và luôn được khách hàng yêu mến và tin dùng trong 20 năm qua
+   +form()

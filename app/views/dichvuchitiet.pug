@@ -1,0 +1,55 @@
+extends layout/layout
+
+block vars
+    -title = ''
+    -bodyClass = 'page-service-detail'
+    -hdClass = 'trans'
+
+block container
+   +bn()
+   section.sec-sdi.ss-pd 
+      .container 
+         .sdi
+            .sdi-wrap
+               .sdi-row.row 
+                  .col.col-5
+                     .sdi-panel 
+                        +title("Chúng tôi đáp ứng mọi nhu cầu logistics của bạn","TỔNG QUAN DỊCH VỤ")
+                        .t-des 
+                           .mona-content 
+                              p 
+                                 | Interlink cung cấp giải pháp vận chuyển đường biển linh hoạt, hiệu quả thông qua mạng lưới đối tác toàn cầu đáng tin cậy.
+                              p 
+                                 | Nhờ mối quan hệ vững chắc với các hãng tàu lớn, chúng tôi đảm bảo giữ chỗ, giá cước cạnh tranh và thời gian giao hàng đúng hẹn – kể cả mùa cao điểm
+                              p 
+                                 | Chúng tôi chuyên phục vụ các tuyến:
+                        .b-bot 
+                           .d-flex.gap40
+                              .iwt 
+                                 span.icon 
+                                    +img("ic-pin.svg")
+                                 span.txt Bắc Mỹ
+                              .iwt 
+                                 span.icon 
+                                    +img("ic-pin.svg")
+                                 span.txt Châu Âu
+                              .iwt 
+                                 span.icon 
+                                    +img("ic-pin.svg")
+                                 span.txt Úc
+                              .iwt 
+                                 span.icon 
+                                    +img("ic-pin.svg")
+                                 span.txt Đông Nam Á
+                  .col.col-6
+                     .sdi-img 
+                        .inner 
+                           +img("sdi-img.jpg")
+                        a(href="").icon
+                           +img("ic-play.svg")
+   section.sec-sas.ss-pd 
+      .container 
+         .sas 
+            .sas-wrap 
+               .sas-head.mb-40
+                  +title("Giải pháp vận tải biển linh hoạt, đáp ứng mọi nhu cầu","DỊCH VỤ CHÍNH")

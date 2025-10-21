@@ -1,0 +1,56 @@
+// Component
+// @use "./core/mixin" as *;
+// @use "./core/font" as *;
+@use "./core/reset";
+@use "./core/mona";
+@use "./core/variable";
+@use "./core/base";
+@use "./core/flex";
+
+@use "./components/backtotop";
+@use "./components/burger";
+@use "./components/datetime";
+@use "./components/footer";
+@use "./components/header";
+@use "./components/loader";
+@use "./components/mobile";
+@use "./components/popup";
+@use "./components/select2";
+@use "./components/scroll";
+@use "./components/smenu";
+
+// Layout
+@use "./layouts/banner";
+@use "./layouts/swiper";
+@use "./layouts/breadcrumb";
+@use "./layouts/btn";
+@use "./layouts/pagi";
+@use "./layouts/search";
+@use "./layouts/sidebar";
+@use "./layouts/text";
+@use "./layouts/component";
+@use "./layouts/distance";
+@use "./layouts/star";
+@use "./layouts/side";
+
+// Pages
+@use "./pages/common";
+@use "./pages/home";
+@use "./pages/contact";
+@use "./pages/about";
+@use "./pages/news";
+@use "./pages/blog";
+@use "./pages/detail";
+@use "./pages/regi";
+
+// Library
+@import url("../assets/library/fontawesome/css/all.css");
+@import url("../assets/library/fontawesome/fontawesome/fontawesome.css");
+@import url("../assets/library/swiper/swiper-bundle.min.css");
+@import url("../assets/library/select2/select2.min.css");
+@import url("../assets/library/fancybox/fancybox.css");
+// @import url("../assets/library/aos/aos.css");
+// @import url("../assets/library/gallery/lightgallery.min.css");
+// @import url("../assets/library/splide/splide.css");
+// @import url("../assets/library/datetime/daterangepicker.css");
+// Core

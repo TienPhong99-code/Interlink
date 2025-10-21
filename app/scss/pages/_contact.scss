@@ -1,0 +1,162 @@
+@use "../core/mixin" as *;
+@use "../core/font" as *;
+
+.form-list {
+  --rg: 1.6rem;
+  --cg: 1.6rem;
+
+  --ip-h: 4.8rem;
+  --ta-h: 10rem;
+
+  --ta-pd: 1.2rem;
+  --fz-ip: 1.6rem;
+
+  --fz-label: 1.6rem;
+  --fw-label: 500;
+  --label-mb: 0.8rem;
+
+  --cl-border: #dedfe0;
+  --cl-focus: var(--color-pri);
+  --bg-ip: var(--color-white);
+  --color-placeholder: rgba(36, 36, 36, 0.5);
+  --br-ip: 0rem;
+  --br-ta: 0rem;
+  @include max(1200px) {
+    --cg: 1.2rem;
+  }
+  ~ .b-submit {
+    margin-top: 2.4rem;
+  }
+  .form-ip {
+    position: relative;
+    .text {
+      color: var(--color-label);
+      display: inline-block;
+      margin-bottom: var(--label-mb);
+      font-size: var(--fz-label);
+      font-weight: var(--fw-label);
+    }
+
+    .ip-pos {
+      position: relative;
+      .icon {
+        position: absolute;
+        width: 2.4rem;
+        height: 2.4rem;
+        @include mid-flex;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--color-text);
+        right: 1.6rem;
+        cursor: pointer;
+      }
+      input {
+        padding-right: 4rem;
+      }
+    }
+    input {
+      height: var(--ip-h);
+      width: 100%;
+      border: 0.1rem solid var(--cl-border);
+      border-radius: var(--br-ip);
+      outline: unset;
+      color: var(--color-text);
+      transition: 0.3s ease-in-out;
+      padding: 0 1.6rem;
+      font-size: var(--fz-ip);
+      background: var(--bg-ip);
+      &::placeholder {
+        color: var(--color-placeholder);
+      }
+      &:focus {
+        border-color: var(--cl-focus);
+      }
+    }
+    textarea {
+      min-height: var(--ta-h);
+      width: 100%;
+      background: var(--bg-ip);
+      border: 0.1rem solid var(--cl-border);
+      border-radius: var(--br-ip);
+      padding: var(--ta-pd);
+      font-size: var(--fz-ip);
+      outline: unset;
+      color: var(--color-text);
+      transition: 0.3s ease-in-out;
+      resize: unset;
+      @include font-pri();
+      &::placeholder {
+        color: var(--color-placeholder);
+      }
+      &:focus {
+        border-color: var(--cl-focus);
+      }
+    }
+  }
+}
+
+.ctm-img {
+  height: 100%;
+  .inner {
+    height: 100%;
+    img {
+      height: 100%;
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+  }
+}
+.ctm {
+  background: var(--color-white);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 1.8rem 2.4rem;
+  &-row {
+    --rg: 0;
+    --cg: 0;
+    @include max(600px) {
+      flex-direction: column;
+      > .col {
+        width: 100%;
+      }
+    }
+  }
+}
+.sec-ctm {
+  margin-top: -2.4rem;
+  position: relative;
+  z-index: 1;
+}
+.ctm-form {
+  padding: 3.2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.4rem;
+  @include max(760px) {
+    padding: 1.2rem;
+  }
+  .b-head {
+    text-align: center;
+    @include max(500px) {
+      br {
+        display: none;
+      }
+    }
+  }
+}
+
+.ctmap-wrap {
+  .inner {
+    height: 46rem;
+    @include max(500px) {
+      height: 32rem;
+    }
+    iframe {
+      width: 100%;
+      display: block;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

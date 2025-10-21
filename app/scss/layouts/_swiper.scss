@@ -1,0 +1,210 @@
+@use "../core/mixin" as *;
+.swiper-wrapper.row {
+  flex-wrap: nowrap;
+}
+
+.swiper.rows {
+  .col {
+    margin-bottom: 0;
+  }
+}
+
+.swiper-container {
+  overflow: hidden;
+}
+
+.swiper-slide {
+  height: initial;
+  overflow: hidden;
+}
+
+.swiper-pagination {
+  position: static;
+  margin-top: 4.8rem;
+  @include flex;
+  align-items: center;
+  justify-content: center;
+  //   gap: 1.2rem;
+  width: 100%;
+  @include max(1200px) {
+    margin-top: 2.4rem;
+  }
+
+  &-bullet {
+    //  --circle: 0.5rem;
+    background-color: #d9d9d9;
+    flex: 1;
+    opacity: 1;
+    position: relative;
+    //  width: 1rem;
+    height: 1rem;
+    margin: unset !important;
+    transition: 0.5s ease-in-out;
+    //  border-radius: 100rem;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      transition: 0.5s ease-in-out width;
+      background: var(--color-pri);
+    }
+
+    &-active {
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+}
+.swiper-control {
+  display: flex;
+  @include flex;
+  align-items: center;
+  gap: 1.6rem;
+  --size: 4rem;
+  font-size: 1.8rem;
+  @include max(1200px) {
+    --size: 3.2rem;
+    font-size: 1.6rem;
+  }
+  &-btn {
+    width: var(--size);
+    height: var(--size);
+    border-radius: 100rem;
+    background-color: var(--color-white);
+    @include mid-flex;
+    cursor: pointer;
+    @include transitionRe;
+    z-index: 5;
+    position: relative;
+    overflow: hidden;
+    @include affter(var(--color-pri));
+    color: var(--color-txt);
+    > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    &.swiper-button-disabled {
+      background-color: #eee;
+      cursor: default;
+      box-shadow: none;
+    }
+
+    i {
+    }
+
+    @include hover {
+      &:not(.swiper-button-disabled) {
+        color: white !important;
+        &::after {
+          left: 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &.white {
+    .swiper-control-btn {
+      background-color: transparent;
+      border-color: white;
+      color: white;
+    }
+
+    &.mobile-plus {
+      .swiper-control-btn {
+        @include max(1350px) {
+          background-color: white;
+          border-color: var(--color-pri);
+          color: var(--color-pri);
+        }
+      }
+    }
+  }
+
+  &.posi {
+    .swiper-control-btn {
+      @include posi-vertical;
+    }
+
+    &.minus {
+      .swiper-prev {
+        right: calc(100% + 2.4rem);
+
+        @include max(1350px) {
+          right: unset;
+          left: calc(var(--size) / 2 * -1);
+        }
+      }
+
+      .swiper-next {
+        left: calc(100% + 2.4rem);
+
+        @include max(1350px) {
+          left: unset;
+          right: calc(var(--size) / 2 * -1);
+        }
+      }
+
+      &.mobile-plus {
+        @include max(500px) {
+          .swiper-prev {
+            left: calc((var(--size) / 2 * -1) + (1.5rem / 2));
+          }
+
+          .swiper-next {
+            right: calc((var(--size) / 2 * -1) + (1.5rem / 2));
+          }
+        }
+      }
+    }
+
+    &.midle {
+      .swiper-prev {
+        left: calc(var(--size) / 2 * -1);
+      }
+
+      .swiper-next {
+        right: calc(var(--size) / 2 * -1);
+      }
+    }
+
+    &.plus {
+      .swiper-prev {
+        left: 1rem;
+      }
+
+      .swiper-next {
+        right: 1rem;
+      }
+    }
+
+    &.mobile-plus {
+      @include max(500px) {
+        .swiper-prev {
+          left: calc((var(--size) / 2 * -1) + (1.5rem / 2));
+        }
+
+        .swiper-next {
+          right: calc((var(--size) / 2 * -1) + (1.5rem / 2));
+        }
+      }
+    }
+  }
+}
+
+.swiper-pagination-progressbar {
+  background: var(--color-black);
+  height: 0.1rem !important;
+}
+
+.swiper-pagination-progressbar-fill {
+  background-color: var(--color-sec) !important;
+}

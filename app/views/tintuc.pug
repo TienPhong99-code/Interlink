@@ -1,0 +1,34 @@
+extends layout/layout
+
+block vars
+    -title = ''
+    -bodyClass = 'page-news'
+    -hdClass = 'trans'
+
+block container
+   +bn()
+   section.sec-news.ss-pd
+      .container 
+         .news 
+            .news-wrap
+               .news-head.mb-40
+                  +title("TIN TỨC & BLOG","TIN TỨC INTERLINK")
+               .news-block 
+                  .news-list.row
+                     each i,index in Array(9)
+                        .col.col-4 
+                           +news()
+                  +PageNumber()
+   section.sec-news.ss-pd
+      .container 
+         .news 
+            .news-wrap
+               .news-head.mb-40
+                  +title("TIN TỨC & BLOG","TIN TỨC NGÀNH LOGISTIC")
+               .news-block 
+                  .news-list.row
+                     each i,index in Array(6)
+                        .col.col-4 
+                           +news()
+                  +PageNumber()
+   +form()

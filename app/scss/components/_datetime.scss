@@ -1,0 +1,62 @@
+@use "../core/mixin" as *;
+@use "../core/font" as *;
+
+.dateTime {
+  position: relative;
+  height: 5rem;
+  border: 0.1rem solid var(--color-border);
+  z-index: 2;
+  border-radius: 15rem;
+  overflow: hidden;
+  &.icon-date {
+    @include flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+.dateTimeItem {
+  position: absolute;
+  @include full;
+  border-radius: inherit;
+}
+
+.dateTimeText {
+  position: absolute;
+  @include full;
+  padding: 0 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  pointer-events: none;
+  background-color: var(--color-white);
+  z-index: 2;
+
+  &.disable {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.dateTimeInput {
+  padding: 0.8rem 1.4rem;
+  position: absolute;
+  @include full;
+  z-index: 1;
+  font-size: 1.4rem;
+  font-weight: 500;
+  @include font-pri;
+  border-radius: inherit;
+  border: unset !important;
+}
+.dateTime.icon-date::after {
+  content: "\f073";
+  width: 2.4rem;
+  height: 2.4rem;
+  @include mid-flex;
+  font-family: "Font Awesome 5 Pro";
+  color: var(--color-pri);
+  position: relative;
+  z-index: 3;
+  margin-right: 1.4rem;
+}
