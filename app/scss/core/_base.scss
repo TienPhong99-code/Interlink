@@ -59,6 +59,9 @@ textarea {
   position: relative;
   z-index: 1;
   background: #f9f9f9;
+  &.page-py {
+    padding-top: var(--size-hd);
+  }
 }
 
 .container {

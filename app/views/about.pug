@@ -2,18 +2,46 @@ extends layout/layout
 
 block vars
     -title = ''
-    -bodyClass = 'page-about'
-    -hdClass = 'trans'
+    -bodyClass = 'page-about page-py'
+    -hdClass = 'hd-main'
 
 block container
-   +bn()
-   section.sec-abi.ss-pd 
+   .bnt
+      .container 
+         .bnt-wrap 
+            +breadCrumb(["Về chúng tôi"])
+            .bnt-head(data-aos="fade-up")
+               span.txt Giải pháp logistics toàn diện
+               h1.title KẾT NỐI TOÀN CẦU VẬN HÀNH TỐI ƯU
+            .bnt-dc 
+               .inner(data-aos="fade")
+                  +img("bnt-dc.png")
+      .bnt-slider 
+         .b-sw.slideFade.posi-rl
+            +SwiperControl("bnt-control")
+            +Swiper()
+               each i,index in Array(3)
+                  .swiper-slide 
+                     .bnt-it 
+                        .inner 
+                           +img(`bnt-slide (${index + 1}).jpg`)
+   .abi-py.ss-pd
+      .abi-links 
+         a(href="").t-links
+            | Về Interlink
+         a(href="").t-links
+            | Hệ giá trị tư tưởng
+         a(href="").t-links
+            | Lịch sử hình thành
+         a(href="").t-links
+            | Hiệp hội & Giải thưởng
+   section.sec-abi.ss-pd-t
       .container 
          .abi 
             .abi-wrap 
                .abi-head
                   +title("Chúng tôi đáp ứng mọi nhu cầu logistics của bạn","VỀ INTERLINK")
-                  .t-des 
+                  .t-des.mt-12
                      p
                         | Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.
                .abi-block 
@@ -30,54 +58,12 @@ block container
                               span.txt Năm
       .hbi-bot
          | INTERLINK
-   .abv 
-      .abv-img 
+   .abvi 
+      .abvi-img 
          .inner 
             +img("abv-img.jpg")
          a(href="").icon
             +img("ic-play.svg")
-   section.sec-abm.ss-pd 
-      .container 
-         .abm 
-            .abm-wrap 
-               .abm-head.mb-40
-                  +title("Interlink đã khẳng định vị thế trên thị trường","TẦM NHÌN & SỨ MỆNH")
-               .abm-block 
-                  .abm-list
-                     each i,index in Array(4)
-                        .abm-it 
-                           .b-panel 
-                              h3.t-head 
-                                 | Tầm nhìn
-                              .t-des 
-                                 p 
-                                    | Đến năm 2030: Interlink sẽ nằm trong Top 10 công ty logistics hàng đầu Việt Nam và trở thành thương hiệu số 1 trong tâm trí khách hàng về chất lượng và sự tin cậy
-                           .b-img 
-                              .inner 
-                                 +img("abm.jpg")
-   section.sec-abc 
-      .container 
-         .abc 
-            .abc-wrap 
-               .abc-head.t-center
-                  +title("Lời trân trọng và biết ơn từ Interlink","THÔNG ĐIỆP CEO")
-               .abc-block 
-                  .abc-row.row 
-                     .col.col-8 
-                        .abc-panel 
-                           .mona-content 
-                              p 
-                                 | Mọi nỗ lực trong hoạt động kinh doanh của chúng tôi đều dựa trên yêu cầu của khách hàng. Chúng tôi luôn đặt mình vào vị trí khách hàng để hiểu rõ mong muốn, nhu cầu, từ đó đem đến cho khách hàng những giải pháp tối ưu, hiệu quả & tiết kiệm.
-                              p 
-                                 | Chúng tôi luôn đặt ra và nỗ lực để đạt được mục tiêu cung cấp dịch vụ vượt trên mức mong đợi của khách hàng. Đây là động lực, là thách thức để Interlink không ngừng cải tiến, không ngừng phát triển nhằm đem lại sự tín nhiệm & hài lòng cho khách hàng.
-                              p 
-                                 | Với lợi thế đội ngũ nhân viên Interlink giàu kinh nghiệm, có năng lực chuyên môn cao, có tinh thần & thái độ phục vụ chuyên nghiệp, làm việc theo hệ thống quy trình luôn được cập nhật & cải tiến; cơ sở hạ tầng luôn được đầu tư nâng cấp giúp chúng tôi mang đến cho khách hàng những giải pháp tư vấn phù hợp, xây dựng quy trình làm việc rõ ràng theo nhu cầu riêng biệt của từng khách hàng. Nhờ đó, chúng tôi thực hiện công việc được suôn sẻ, hiệu quả & mang đến dịch vụ chất lượng ổn định cho khách hàng.
-                              p 
-                                 | Interlink quyết tâm & vững vàng trên con đường đã đặt ra “Nhiệm vụ thực thi an tâm & thành
-                     .col.col-4
-                        .abc-img 
-                           .inner 
-                              +img("abc-img.png")
    section.sec-abh.ss-pd 
       .container 
          .abh 

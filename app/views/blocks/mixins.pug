@@ -64,16 +64,25 @@ mixin Count()
       p.count-number 1
       .count-btn.count-plus 
          i.fas.fa-plus.icon
-mixin SwiperControl(customClass)
-    .swiper-control(class= customClass) 
-      .swiper-control-btn.swiper-prev 
-          i.fa-light.fa-arrow-left
-      .swiper-control-btn.swiper-next 
-          i.fa-light.fa-arrow-right
+mixin SwiperControl(customClass,pagi)
+   if(pagi)
+      .swiper-control(class= customClass) 
+         .swiper-control-btn.swiper-prev 
+             i.fa-light.fa-arrow-left
+         +pagination(pagi)
+         .swiper-control-btn.swiper-next 
+             i.fa-light.fa-arrow-right
+   else
+      .swiper-control(class= customClass) 
+         .swiper-control-btn.swiper-prev 
+            i.fa-light.fa-arrow-left
+         +pagination(pagi)
+         .swiper-control-btn.swiper-next 
+            i.fa-light.fa-arrow-right
 mixin Swiper(customClass)
    .swiper-container 
       .swiper.rows 
-         .swiper-wrapper 
+         .swiper-wrapper
             block
 mixin img(name)
   img(src="./assets/images/" + name, alt="")
@@ -118,7 +127,10 @@ mixin news()
       .b-img 
          .inner
             +img("news-img.jpg")
+         a(href="").ic-link
+            i.fa-light.fa-arrow-right 
       .b-ctn 
+         span.t-tag Thanh Toán Quốc Tế
          .b-top 
             span.txt By Mona 
             span.txt 22/01/2024
@@ -224,3 +236,13 @@ mixin bn()
                   +pagination("bnh-pagi")
                   .swiper-control-btn.swiper-next
                      i.fa-light.fa-arrow-right
+mixin bnt(txt,title,img)
+   .bnt
+      .container 
+         .bnt-wrap 
+            +breadCrumb(["Về chúng tôi"])
+            .bnt-head
+               span.txt #{txt}
+               h1.title #{title}
+            .bnt-dc
+               +img("bnt-dc.png")

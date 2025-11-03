@@ -1,0 +1,154 @@
+extends layout/layout
+
+block vars
+    -title = ''
+    -bodyClass = 'page-about page-py'
+    -hdClass = 'hd-main'
+
+block container
+   .abi-py.ss-pd
+      .abi-links 
+         a(href="").t-links.active
+            | Về Interlink
+         a(href="").t-links
+            | Hệ giá trị tư tưởng
+         a(href="").t-links
+            | Lịch sử hình thành
+         a(href="").t-links
+            | Hiệp hội & Giải thưởng
+   section.sec-abv 
+      .abv
+         .container
+            .abv-block 
+               .abv-head.t-center.mb-40
+                  +title("Interlink đã khẳng định vị thế trên thị trường","HỆ GIÁ TRỊ TƯ TƯỞNG INTERLINK")
+               .abv-bn 
+                  .inner(data-aos="fade-up")
+                     span.t-text 
+                        | PARTNERSHIP
+                        br
+                        | TO SUCCESS
+                     span.t-txt ĐỒNG HÀNH THÀNH CÔNG
+                  .b-img 
+                     +img("abv-bn.jpg")
+         .abv-group 
+            .abv-it 
+               .container
+                  .abv-inner
+                     .b-row.row 
+                        .col.col-7
+                           .abv-img 
+                              +img("abv-it1.jpg")
+                        .col.col-5 
+                           .abv-panel(data-aos="fade-up")
+                              .t-head 
+                                 span.icon 
+                                    +img("ic-abv (1).svg")
+                                 .t-gr
+                                    span.txt Tầm nhìn | Vision
+                                    p.text Đến năm 2030: Interlink sẽ nằm trong
+                              .t-body 
+                                 span.t-dc TOP 
+                                 .img-dc 
+                                    +img("abv-dc.png")
+                                 .t-des
+                                    p.fw-3
+                                       | Công ty logistics hàng đầu Việt Nam và trở thành thương hiệu số 1 trong tâm trí khách hàng về chất lượng và sự tin cậy.
+            .abv-it
+               .container 
+                  .abv-inner
+                     .abv-pos 
+                        .abv-grid 
+                           .abv-box
+                              .abv-panel(data-aos="fade-up")
+                                 .t-head 
+                                    span.icon 
+                                       +img("ic-abv (2).svg")
+                                    .t-gr
+                                       span.txt Sứ mệnh | Mission
+                                 .t-body 
+                                    .t-des.fw-3
+                                       ul 
+                                          li 
+                                             | Là đối tác logistics chuyên nghiệp và sáng tạo, cung cấp giải pháp tối ưu, đồng hành phát triển cùng khách hàng.
+                                          li 
+                                             | Không ngừng nâng cao đời sống vật chất và tinh thần cho nhân viên.
+                                          li 
+                                             | Là cầu nối giao thương giữa Việt Nam và Thế giới, đóng góp cho cộng đồng thông qua các hoạt động từ thiện.
+                           .abv-box
+                              .abv-img 
+                                 +img("abv-it2.jpg")
+                           .abv-box
+                              .abv-img 
+                                 +img("abv-it3.jpg")
+                           .abv-box
+                              .abv-img 
+                                 +img("abv-it4.jpg")
+                           .abv-box
+                              .abv-img 
+                                 +img("abv-it5.jpg")
+            .abv-it
+               .container 
+                  .abv-inner
+                     .b-row.row 
+                        .col.col-6
+                           .abv-img 
+                              +img("abv-it6.jpg")
+                        .col.col-6
+                           .abv-panel(data-aos="fade-up")
+                              .t-head 
+                                 span.icon 
+                                    +img("ic-abv (3).svg")
+                                 .t-gr
+                                    span.txt Lẽ sống | Purpose
+                              .t-body 
+                                 .t-des
+                                    p  Logistics chuyên nghiệp, kết nối giao thương Việt Nam – Thế giới, phát triển bền vững cho doanh nghiệp Việt.
+            .abv-it
+               .abv-inner
+                  .hbi-bot
+                     | INTERLINK
+            .abv-it.custom
+               .container 
+                  .abv-inner 
+                     .b-row.row 
+                        .col.col-left 
+                           .abv-panel(data-aos="fade-up")
+                              .t-head 
+                                 span.icon 
+                                    +img("ic-abv (4).svg")
+                                 .t-gr
+                                    span.txt Triết lý kinh doanh | Business Philosophy
+                              .t-body 
+                                 .t-des
+                                    p Interlink xây dựng công ty thành công bền vững bằng mối quan hệ chân thành, tin cậy, chuyên nghiệp và là cầu nối giao thương giữa Việt Nam và Thế giới.
+                        .col.col-right
+                           .abv-img 
+                              +img("abv-it7.svg")
+            .abv-it
+               .container 
+                  .abv-inner 
+                     .abv-panel 
+                        .t-head.center
+                           span.icon 
+                              +img("ic-abv (5).svg")
+                           .t-gr
+                              span.txt Giá trị cốt lõi | Core Values
+                     .abv-core(data-aos="fade-up")
+                        .b-main 
+                           .b-list
+                              .b-box.x1 
+                                 .t-text.fw-6 Chuyên nghiệp | Professionalism
+                                 .t-des Chuẩn hoá quy trình, cam kết dịch vụ đạt chuẩn cao nhất
+                              .b-box.x2
+                                 .t-text.fw-6 Trung thực | Integrity
+                                 .t-des Minh bạch và chân thành trong mọi giao dịch và mối quan hệ.
+                              .b-box.x3
+                                 .t-text.fw-6 Tận tâm | Dedication
+                                 .t-des Chủ động và tận tụy trong phục vụ khách hàng & hỗ trợ đồng đội
+                              .b-box.x4
+                                 .t-text.fw-6 Sáng tạo | Innovation
+                                 .t-des Linh hoạt và đổi mới không ngừng để tối ưu giải pháp logistics cho khách hàng.
+                           .b-img 
+                              +img("abv-core.jpg")
+   +form()

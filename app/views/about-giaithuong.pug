@@ -1,0 +1,75 @@
+extends layout/layout
+
+block vars
+    -title = ''
+    -bodyClass = 'page-about page-py'
+    -hdClass = 'hd-main'
+
+block container
+   .bnt
+      .container 
+         .bnt-wrap 
+            +breadCrumb(["Về chúng tôi"])
+            .bnt-head(data-aos="fade-up")
+               span.txt Giải pháp logistics toàn diện
+               h1.title KẾT NỐI TOÀN CẦU VẬN HÀNH TỐI ƯU
+            .bnt-dc 
+               .inner(data-aos="fade")
+                  +img("bnt-dc.png")
+      .bnt-slider 
+         .b-sw.slideFade.posi-rl
+            +SwiperControl("bnt-control")
+            +Swiper()
+               each i,index in Array(3)
+                  .swiper-slide 
+                     .bnt-it 
+                        .inner 
+                           +img(`bnt-slide (${index + 1}).jpg`)
+   .abi-py.ss-pd
+      .abi-links 
+         a(href="").t-links
+            | Về Interlink
+         a(href="").t-links
+            | Hệ giá trị tư tưởng
+         a(href="").t-links
+            | Lịch sử hình thành
+         a(href="").t-links
+            | Hiệp hội & Giải thưởng
+   section.sec-hbr.ss-pd-b
+      .container 
+         .hbr 
+            .hbr-wrap
+               .hbr-head.mb-40
+                  .b-head.t-center
+                     span.txt.c-sec.t18 Những thành tựu đã đạt được suốt hơn 20 năm Interlink hoạt động
+                     .head.mt-12
+                        h2.t-title 
+                           | HIỆP HỘI & GIẢI THƯỞNG
+                  .b-bot 
+                     | Hiệp hội
+               .hbr-block
+                  .hbr-slider.slideSwLogo
+                     +Swiper()
+                        each i,index in Array(8)
+                           .swiper-slide.col
+                              .hbr-item 
+                                 .b-img 
+                                    .inner 
+                                       +img(`hbr-img (${index + 1}).png`)
+            .hbr-wrap.hbr-reward
+               .hbr-head.mb-40
+                  .b-bot 
+                     | Giải thưởng
+               .hbr-block
+                  .hbr-slider-reward.slideSw
+                     +Swiper()
+                        each i,index in Array(5)
+                           .swiper-slide.col-3.col
+                              .hbr-reward-item
+                                 span.num 2013
+                                 .b-img 
+                                    .inner 
+                                       +img("hbr-img-reward.jpg")
+                                 p.t-des Giải thưởng Thương hiệu
+                                    | được khách hàng lựa chọn 
+   +form()

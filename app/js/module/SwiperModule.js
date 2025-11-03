@@ -8,14 +8,19 @@ export default function SwiperModule() {
         const next = item.querySelector(".swiper-next");
         const prev = item.querySelector(".swiper-prev");
         if (!typePagi) {
-          typePagi = "bullets";
+          typePagi = "fraction";
         }
         var slide = new Swiper(swiper, {
           watchSlidesProgress: true,
           pagination: {
             el: pagi,
             type: typePagi,
-            clickable: true,
+            formatFractionCurrent: function (number) {
+              return number < 10 ? "0" + number : number;
+            },
+            formatFractionTotal: function (number) {
+              return number < 10 ? "0" + number : number;
+            },
           },
           navigation: {
             nextEl: next,
@@ -50,6 +55,20 @@ export default function SwiperModule() {
     centeredSlides: false,
     loop: false,
     effect: "slide",
+  });
+  functionSlider(".slideSwLogo", {
+    speed: 6000,
+    allowTouchMove: false,
+    freeMode: true,
+    freeModeMomentum: false,
+    autoplay: {
+      delay: 0,
+    },
+    slidesPerView: "auto",
+    initialSlide: 0,
+    centeredSlides: true,
+    effect: "slide",
+    loop: true,
   });
   functionSlider(".slideFade", {
     speed: 1200,

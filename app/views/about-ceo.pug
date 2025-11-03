@@ -1,0 +1,53 @@
+extends layout/layout
+
+block vars
+    -title = ''
+    -bodyClass = 'page-about page-py'
+    -hdClass = 'hd-main'
+
+block container
+   .bnt
+      .container 
+         .bnt-wrap 
+            +breadCrumb(["Về chúng tôi"])
+            .bnt-head(data-aos="fade-up")
+               span.txt Giải pháp logistics toàn diện
+               h1.title KẾT NỐI TOÀN CẦU VẬN HÀNH TỐI ƯU
+            .bnt-dc 
+               .inner(data-aos="fade")
+                  +img("bnt-dc.png")
+      .bnt-slider 
+         .b-sw.slideFade.posi-rl
+            +SwiperControl("bnt-control")
+            +Swiper()
+               each i,index in Array(3)
+                  .swiper-slide 
+                     .bnt-it 
+                        .inner 
+                           +img(`bnt-slide (${index + 1}).jpg`)
+   section.sec-abc 
+      .abc 
+         .abc-wrap 
+            .abc-block
+               .abc-row.row 
+                  .col.col-left
+                     .abc-img 
+                        .is-dc(data-aos="zoom-out") 
+                           +img("abc-dc.png")
+                        .inner
+                           +img("abc-img.png")
+                  .col.col-right
+                     .abc-panel(data-aos="fade-up")
+                        .abc-head
+                           +title("Lời trân trọng và biết ơn từ Interlink","THÔNG ĐIỆP CEO")
+                        .b-des
+                           .mona-content 
+                              p 
+                                 | Mọi nỗ lực trong hoạt động kinh doanh của chúng tôi đều dựa trên yêu cầu của khách hàng. Chúng tôi luôn đặt mình vào vị trí khách hàng để hiểu rõ mong muốn, nhu cầu, từ đó đem đến cho khách hàng những giải pháp tối ưu, hiệu quả & tiết kiệm.
+                              p 
+                                 | Chúng tôi luôn đặt ra và nỗ lực để đạt được mục tiêu cung cấp dịch vụ vượt trên mức mong đợi của khách hàng. Đây là động lực, là thách thức để Interlink không ngừng cải tiến, không ngừng phát triển nhằm đem lại sự tín nhiệm & hài lòng cho khách hàng.
+                              p 
+                                 | Với lợi thế đội ngũ nhân viên Interlink giàu kinh nghiệm, có năng lực chuyên môn cao, có tinh thần & thái độ phục vụ chuyên nghiệp, làm việc theo hệ thống quy trình luôn được cập nhật & cải tiến; cơ sở hạ tầng luôn được đầu tư nâng cấp giúp chúng tôi mang đến cho khách hàng những giải pháp tư vấn phù hợp, xây dựng quy trình làm việc rõ ràng theo nhu cầu riêng biệt của từng khách hàng. Nhờ đó, chúng tôi thực hiện công việc được suôn sẻ, hiệu quả & mang đến dịch vụ chất lượng ổn định cho khách hàng.
+                              p 
+                                 | Interlink quyết tâm & vững vàng trên con đường đã đặt ra “Nhiệm vụ thực thi an tâm & thành
+   +form()

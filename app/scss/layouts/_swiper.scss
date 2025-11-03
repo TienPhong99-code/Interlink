@@ -20,12 +20,13 @@
 
 .swiper-pagination {
   position: static;
-  margin-top: 4.8rem;
   @include flex;
   align-items: center;
   justify-content: center;
   //   gap: 1.2rem;
-  width: 100%;
+  color: var(--color-white);
+  width: auto;
+  min-width: 6rem;
   @include max(1200px) {
     margin-top: 2.4rem;
   }

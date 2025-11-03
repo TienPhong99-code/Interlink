@@ -25,7 +25,26 @@
     @include min(1201px) {
       --size-hd: 7rem;
     }
-
+    .hd-action .t-link {
+      .icon {
+        filter: unset;
+      }
+    }
+    .hd-btn {
+      background: var(--color-pri);
+      color: #fff;
+      .ic {
+        filter: brightness(0) invert(1);
+      }
+    }
+  }
+  &.hd-main {
+    background: #f9f9f9;
+    --color-white: #242424;
+    border-color: rgba(84, 84, 84, 0.2);
+    @include min(1201px) {
+      --size-hd: 7rem;
+    }
     .hd-action .t-link {
       .icon {
         filter: unset;
