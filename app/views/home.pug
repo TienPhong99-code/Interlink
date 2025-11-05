@@ -52,23 +52,23 @@ block container
                               +Btn("Tìm hiểu thêm","","b-link")
       .hbi-bot
          | INTERLINK
-   section.sec-ser.ss-pd 
-      .ser
-         .ser-wrap
-            .ser-thumb.slideLoop
-               .b-sw 
-                  .swiper-container 
-                     .swiper.rows(dir="rtl")
-                        .swiper-wrapper 
-                           each i,index in Array(4)
-                              .swiper-slide.col 
-                                 .sers-it
-                                    .b-img 
-                                       .inner 
-                                          +img("ser-img.jpg")
-                                    .b-ctn 
-                                       span.t-text Vận chuyển nội địa
-                                       a(href="").t-link Tìm hiểu thêm
+   //- section.sec-ser.ss-pd 
+   //-    .ser
+   //-       .ser-wrap
+   //-          .ser-thumb.slideLoop
+   //-             .b-sw 
+   //-                .swiper-container 
+   //-                   .swiper.rows(dir="rtl")
+   //-                      .swiper-wrapper 
+   //-                         each i,index in Array(4)
+   //-                            .swiper-slide.col 
+   //-                               .sers-it
+   //-                                  .b-img 
+   //-                                     .inner 
+   //-                                        +img("ser-img.jpg")
+   //-                                  .b-ctn 
+   //-                                     span.t-text Vận chuyển nội địa
+   //-                                     a(href="").t-link Tìm hiểu thêm
    section.sec-hbr.ss-pd
       .container 
          .hbr 
@@ -76,28 +76,27 @@ block container
                .hbr-head.mb-40
                   .b-head.t-center
                      span.txt.c-sec.t18 Thành viên của các hiệp hội
-                     .head 
+                     .head.mt-12
                         h2.t-title 
-                           | INTERLINK LÀ THÀNH VIÊN & ĐỐI TÁC
+                           | INTERLINK LÀ THÀNH VIÊN & ĐỐI TÁC 
                            br
                            | CỦA CÁC HIỆP HỘI, CƠ QUAN, TỔ CHỨC UY TÍN
                .hbr-block
-                  .hbr-slider.slideSw
+                  .hbr-slider.slideSwLogo
                      +Swiper()
-                        each i,index in Array(5)
-                           .swiper-slide.col-3.col
+                        each i,index in Array(8)
+                           .swiper-slide.col
                               .hbr-item 
                                  .b-img 
                                     .inner 
-                                       +img("hbr-img.png")
-   section.sec-fb.ss-pd
+                                       +img(`hbr-img (${index + 1}).png`)
+   section.sec-fb.ss-pd-b
       .container 
          .fb-wrap 
             .fb-head.mb-40
                .d-flex.a-center.j-bw 
                   .b-head 
-                     span.txt.c-sec.t18 Khách hàng là minh chứng cho uy tín của Interlink
-                     +title("KHÁCH HÀNG CỦA CHÚNG TÔI")
+                     +title("Khách hàng là minh chứng cho uy tín của Interlink","KHÁCH HÀNG CỦA CHÚNG TÔI","")
                   +Btn("Liên hệ ngay","","")
             .fb-block 
                .fb-slider.slideSw
@@ -126,8 +125,7 @@ block container
                .case-head 
                   .d-flex.a-center.j-bw 
                      .b-head
-                        span.txt.c-sec.t18 Câu chuyện thành công: Interlink đã giúp họ như thế nào ?
-                        +title("CASE STUDY THỰC TẾ")
+                        +title("Câu chuyện thành công: Interlink đã giúp họ như thế nào ?","CASE STUDY THỰC TẾ","")
                      +Btn("XEM THÊM","","")
                .case-block 
                   .case-list 
@@ -154,8 +152,7 @@ block container
                .hnews-row.row 
                   .col.col-4 
                      .hnews-head 
-                        span.c-sec.t18 Tin tức vận tải 
-                        +title("PR CENTER")
+                        +title("Tin tức vận tải","PR CENTER","")
                         .mt-24
                            +Btn("XEM THÊM","","")
                   .col.col-8
@@ -176,8 +173,7 @@ block container
          .container 
             .env-head.mb-40
                .t-head 
-                  span.txt.c-sec.t18 Ghi dấu hoạt động tại Interlink 
-                  +title("CÔNG TY TẠI INTERLINK")
+                  +title("Ghi dấu hoạt động tại Interlink","CÔNG TY TẠI INTERLINK","")
                .tab-list 
                   a(href="").t-link
                      | KỈ NIỆM 

@@ -14,10 +14,34 @@ block container
                h1.title.t-center
                   | NHỮNG CÂU CHUYỆN THÀNH CÔNG
             .b-img
-      .b-sw.slideFade
+            .bnt-slider 
+      .b-sw.slideFade.posi-rl
+         +SwiperControl("bnt-control")
          +Swiper()
             each i,index in Array(3)
-               .col.swiper-slide
-                  .b-img 
+               .swiper-slide 
+                  .bnt-it 
                      .inner 
-                        +img(`bn-st${index+1}.jpg`)
+                        +img(`bnt-slide (${index + 1}).jpg`)
+   section.sec-stm.ss-pd 
+      .container 
+         .stm 
+            .stm-wrap 
+               .stm-list.row 
+                  each i,index in Array(4)
+                     .col.col-6 
+                        .stm-it 
+                           .b-img 
+                              .inner 
+                                 +img(`stm-img (${index + 1}).jpg`)
+                              a(href="").ic-link
+                                 i.fa-light.fa-arrow-right
+                           .b-ctn 
+                              .t-des 
+                                 p 
+                                    | Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.
+                              span.line
+                              .b-author.d-flex.d-col
+                                 span.txt.fw-6 Van Nguyen
+                                 span.text.fw-3.t14 Marketing
+   +form()

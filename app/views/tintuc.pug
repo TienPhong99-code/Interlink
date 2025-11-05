@@ -7,16 +7,16 @@ block vars
 
 block container
    +bn()
-   section.sec-news.ss-pd
+   section.sec-news.ss-pd-t
       .container 
          .news 
             .news-wrap
                .news-head.mb-40
                   +title("TIN TỨC & BLOG","TIN TỨC INTERLINK")
                .news-block 
-                  .news-list.row
-                     each i,index in Array(9)
-                        .col.col-4 
+                  .news-grid
+                     each i,index in Array(5)
+                        .col-news
                            +news()
                   +PageNumber()
    section.sec-news.ss-pd

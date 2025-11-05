@@ -128,10 +128,10 @@
 .sec-ser {
   overflow: hidden;
 }
-.ser-wrap {
-  position: relative;
-  padding-top: calc(744 / 1504 * 100%);
-}
+// .ser-wrap {
+//   position: relative;
+//   padding-top: calc(744 / 1504 * 100%);
+// }
 .ser-thumb {
   position: absolute;
   @include full;

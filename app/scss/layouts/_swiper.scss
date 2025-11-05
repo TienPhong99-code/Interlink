@@ -27,9 +27,6 @@
   color: var(--color-white);
   width: auto;
   min-width: 6rem;
-  @include max(1200px) {
-    margin-top: 2.4rem;
-  }
 
   &-bullet {
     //  --circle: 0.5rem;

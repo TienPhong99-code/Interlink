@@ -45,7 +45,7 @@ block container
                      .sdi-img 
                         .inner 
                            +img("sdi-img.jpg")
-                        a(href="").icon
+                        a(href="https://youtu.be/oqXwzhMD_xI?si=gSLb5hu4mviwpEHr" data-fancybox).icon
                            +img("ic-play.svg")
    section.sec-sas.ss-pd 
       .container 
@@ -53,3 +53,63 @@ block container
             .sas-wrap 
                .sas-head.mb-40
                   +title("Giải pháp vận tải biển linh hoạt, đáp ứng mọi nhu cầu","DỊCH VỤ CHÍNH")
+               .sas-block 
+                  .sas-slider.slideSw 
+                     .b-sw 
+                        +Swiper()
+                           each i,index in Array(4)
+                              .swiper-slide.col.col-3
+                                 .service-item
+                                    a(href="").hidden-link
+                                    .b-inner
+                                       .inner 
+                                          +img('service-img.jpg')
+                                       .t-gr
+                                          h3.t-text LCL
+                                          .t-des.t16.fw-6
+                                             p 
+                                                | Vận chuyển nguyên container
+   section.sec-wh.ss-pd-b 
+      .container 
+         .wh 
+            .wh-wrap 
+               .wh-head.mb-40
+                  +title("Mạng lưới vận chuyển toàn cầu & Hệ thống số hoá mạnh mẽ","TẠI SAO LẠI CHỌN INTERLINK?")
+               .wh-block 
+                  .wh-list.row 
+                     each i,index in Array(4)
+                        .col.col-3 
+                           .wh-it 
+                              .icon 
+                                 +img(`ic-wh${index + 1}.svg`)
+                              .t-des 
+                                 p 
+                                    | Kết nối với hơn 500 cảng biển trên toàn thế giới, đảm bảo vận chuyển nhanh chóng và hiệu quả.
+      .hbi-bot
+         | INTERLINK
+   section.sec-prj-se.ss-pd-b
+      .container 
+         .prj-se 
+            .prj-se-wrap 
+               .prj-se-head.mb-40.t-center
+                  +title("Dự án","DỰ ÁN TIÊU BIỂU")
+               .prj-se-block
+                  .prj-se-slider.slideSw
+                     .b-sw 
+                        +Swiper()
+                           each i,index in Array(6)
+                              .swiper-slide.col
+                                 .prj-item.prj-main
+                                    .b-img 
+                                       +img("prj-main.jpg")
+                                    .b-ctn 
+                                       .box-info 
+                                          h3.title 
+                                                a(href="") Lorem ipsum dolor sit amet consectetuadipisicing elit. Consec 
+                                          .t-des
+                                                p 
+                                                   | Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.
+                                       .box-btn 
+                                          +Btn("Đọc tiếp","","b-link")
+                  .b-btn.mt-24
+                     +Btn("Xem tất cả dự án","","center")

@@ -16,19 +16,33 @@ export default function ComponentModule() {
     });
   }
   //   Copy
-  var temp = $("<input>");
-  temp.addClass("inputURL");
-  var $url = $(location).attr("href");
-  $(".getlink").on("click", function () {
-    $("body").append(temp);
-    temp.val($url).select();
-    document.execCommand("copy");
-
-    $(".getlink-note").css("display", "block");
-    setTimeout(() => {
-      $(".getlink-note").css("display", "none");
-    }, 500);
-  });
+  const copyBtn = document.querySelectorAll(".copyJS");
+  if (copyBtn) {
+    copyBtn.forEach((item) => {
+      const copyTxt = item.querySelector(".getlink-note");
+      const url = item.getAttribute("data-url");
+      item.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (url) {
+          navigator.clipboard.writeText(url).then(() => {
+            item.classList.add("active");
+            copyTxt.style.display = "block";
+          });
+          setTimeout(() => {
+            item.classList.remove("active");
+            copyTxt.style.display = "none";
+          }, 500);
+        }
+        // copyUrl();
+      });
+      function copyUrl() {
+        const url = window.location.href;
+        navigator.clipboard.writeText(url).then(() => {
+          item.classList.add("active");
+        });
+      }
+    });
+  }
   //   Massonry
   //   (function ($) {
   //     "use strict";

@@ -1,0 +1,53 @@
+extends layout/layout
+
+block vars
+    -title = ''
+    -bodyClass = 'page-news-detail page-py'
+    -hdClass = 'hd-second'
+
+block container
+   section.sec-news-dt
+      .container 
+         .news-dt 
+            .news-dt-wrap 
+               +breadCrumb(["Tin tức","Tin tức ngành logistic"])
+               .news-dt-block 
+                  .news-dt-row.row 
+                     .col.col-3
+                        .news-dt-toc 
+                           | Plugin 
+                     .col.col-9
+                        .news-dt-panel 
+                           .b-head.d-flex.d-col.gap24
+                              .t-head.d-flex.j-bw
+                                 span.t-time By Lorem | 12-08-2025
+                                 .t-social 
+                                    .d-flex.a-center 
+                                       span.txt Chia sẻ ngay 
+                                       .mxh-social
+                                          a(href="").i-link
+                                             +img("ic-fbs.svg")
+                                          a(href="").i-link
+                                             +img("ic-in.svg")
+                                          .i-link.getlink.copyJS(data-url="https://interlink.com.vn/cau-chuyen-chi-tiet")
+                                             +img("ic-copy.svg")
+                                             span.getlink-note Đã sao chép
+                              .b-title 
+                                 h1.title Câu chuyện chi tiết về logistics và vận tải biển
+                           .b-panel 
+                              .mona-content
+                                 | Content
+   section.sec-news-rl.ss-pd 
+      .container 
+         .news-rl 
+            .news-rl-wrap 
+               .news-rl-head.mb-40
+                  +title("Tin tức & Blog","TIN LIÊN QUAN")
+               .news-rl-block 
+                  .news-rl-slider.slideSw
+                     .b-sw
+                        +Swiper()
+                           each i,index in Array(5)
+                              .swiper-slide.col.col-3
+                                 +news()
+   +form()

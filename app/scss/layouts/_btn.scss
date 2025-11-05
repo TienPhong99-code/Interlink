@@ -93,4 +93,13 @@
   &.center {
     margin: 0 auto;
   }
+  &.b-link {
+    padding: unset;
+    background: unset;
+    color: var(--color-pri);
+    min-height: unset;
+    &::after {
+      display: none;
+    }
+  }
 }

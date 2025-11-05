@@ -6,3 +6,76 @@ block vars
     -hdClass = 'trans'
 
 block container
+    .bn-exp 
+        .bn-exp-br 
+            +breadCrumb(["Kiến thức chuyên sâu"])
+        .bn-exp-wrap 
+            .bn-exp-slider.prdsSlider
+                .bn-exp-main.prdsMainSw
+                    .bn-exp-pos 
+                        span.txt Câu chuyện thành công
+                        h1.title CASE STUDY THỰC TẾ
+                    .b-sw.posi-rl
+                        +SwiperControl("bn-exp-control")
+                        +Swiper()
+                            each i,index in Array(4)
+                                .swiper-slide.col 
+                                    .bn-exp-img 
+                                        .inner 
+                                            +img(`exp-img (${index + 1}).jpg`)
+                .bn-exp-thumb.prdsThumbSw
+                    .b-sw 
+                        +Swiper()
+                            each i,index in Array(4)
+                                .swiper-slide.col.col-4
+                                    .bn-exp-it 
+                                        .b-head 
+                                            .b-num 
+                                                span.txt.fw-7 CASE 
+                                                span.num 0#{index + 1}
+                                            h2.title Lorem Ipsum chỉ là 1 đoạn văn bản giả
+                                        .b-ctn 
+                                            .t-des 
+                                                p 
+                                                    | Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.
+                                            a(href="").t-links Đọc tiếp 
+    section.sec-prj.ss-pd 
+        .container 
+            .prj 
+                .prj-wrap 
+                    .prj-head.mb-40
+                        +title("Dự án","INTERLINK ĐÃ THỰC HIỆN")
+                    .prj-block
+                        .prj-top 
+                            .prj-item.prj-main 
+                                .b-img 
+                                    +img("prj-main.jpg")
+                                .b-ctn 
+                                    .box-info 
+                                        h3.title 
+                                            a(href="") Lorem ipsum dolor sit amet consectetuadipisicing elit. Consec 
+                                        .t-des
+                                            p 
+                                                | Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.
+                                    .box-btn 
+                                        +Btn("Đọc tiếp")
+                        .prj-slider 
+                            .b-slider.slideSw 
+                                .b-sw.posi-rl 
+                                    +SwiperControl("prj-control posi  midle")
+                                    +Swiper()
+                                        each i,index in Array(5)
+                                            .swiper-slide.col.col-3
+                                                .prj-item
+                                                    .b-img 
+                                                        +img("prj-main.jpg")
+                                                    .b-ctn 
+                                                        .box-info 
+                                                            h3.title 
+                                                                a(href="") Lorem ipsum dolor sit amet consectetuadipisicing elit. Consec 
+                                                            .t-des
+                                                                p 
+                                                                    | Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.
+                                                        .box-btn 
+                                                            +Btn("Đọc tiếp","","b-link")
+    +form()

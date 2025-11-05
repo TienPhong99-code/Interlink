@@ -1,0 +1,97 @@
+extends layout/layout
+
+block vars
+    -title = ''
+    -bodyClass = 'page-quote page-py'
+    -hdClass = 'hd-second'
+
+block container
+   .bnt
+      .container 
+         .bnt-wrap 
+            +breadCrumb(["Về chúng tôi"])
+            .bnt-head(data-aos="fade-up")
+               span.txt Giải pháp logistics toàn diện
+               h1.title KẾT NỐI TOÀN CẦU VẬN HÀNH TỐI ƯU
+            .bnt-dc 
+               .inner(data-aos="fade")
+                  +img("bnt-dc.png")
+      .bnt-slider 
+         .bnt-it 
+            .inner 
+               +img(`bnt-slide (1).jpg`)
+   section.sec-frm.ss-pd-b
+      .container 
+         .frm
+            .frm-wrap 
+               .frm-head
+                  h2.t-title GỬI YÊU CẦU BÁO GIÁ
+                  .t-des
+                     p 
+                        | Nếu bạn có bất kì câu hỏi hoặc đánh giá cho dịch vụ vận chuyển, vui lòng điền vào form bên dưới
+               .frm-block
+                  .frm-form 
+                     form(action="")
+                        .form-list.row 
+                           .col.form-ip
+                              span.text.dot Họ và tên 
+                              input(type="text" placeholder="Họ và tên")
+                           .col.form-ip.col-6
+                              span.text.dot Số điện thoại
+                              input(type="text" placeholder="Số điện thoại")
+                           .col.form-ip.col-6
+                              span.text.dot Email
+                              input(type="text" placeholder="Email")
+                           .col.form-ip.col-6
+                              span.text.dot Tên doanh nghiệp
+                              input(type="text" placeholder="Tên doanh nghiệp")
+                           .col.form-ip.col-6
+                              span.text Loại hình dịch vụ
+                              .b-select 
+                                 select(name="").re-select-main
+                                    option(value="") Vui lòng chọn dịch vụ
+                                    option(value="") Vui lòng chọn dịch vụ
+                           .col.form-ip.col-6
+                              span.text Loại hàng hoá
+                              .b-select 
+                                 select(name="").re-select-main
+                                    option(value="") Vui lòng chọn dịch vụ
+                                    option(value="") Vui lòng chọn dịch vụ 
+                           .col.form-ip.col-6
+                              span.text Ngành hàng
+                              .b-select 
+                                 select(name="").re-select-main
+                                    option(value="") Vui lòng chọn dịch vụ
+                                    option(value="") Vui lòng chọn dịch vụ 
+                           .col.form-ip.col-6
+                              span.text Dịch vụ
+                              .b-select 
+                                 select(name="").re-select-main
+                                    option(value="") Vui lòng chọn dịch vụ
+                                    option(value="") Vui lòng chọn dịch vụ
+                           .col.form-ip.col-6
+                              span.text.dot Dịch vụ yêu cầu riêng
+                              input(type="text" placeholder="Dịch vụ yêu cầu riêng")
+                           .col.form-ip.col-6
+                              span.text.dot Tên hàng hoá
+                              input(type="text" placeholder="Tên hàng hoá")
+                           .col.form-ip.col-6
+                              span.text.dot Điểm xuất phát và điểm đến ước tính
+                              input(type="text" placeholder="Điểm xuất phát và điểm đến ước tính")
+                           .col.form-ip.col-6
+                              span.text Vận chuyển
+                              .b-select 
+                                 select(name="").re-select-main
+                                    option(value="") Vui lòng chọn 
+                                    option(value="") Vui lòng chọn
+                           .col.form-ip.col-6
+                              span.text.dot Ngày bàn giao
+                              .b-time 
+                                 input(type="date" placeholder="Chọn ngày")
+                           .col.form-ip
+                              span.text Tin nhắn
+                              textarea(placeholder="Tin nhắn")
+                        .b-bot
+                           +Checker("checkbox","checkbox","Đánh dấu vào ô này, tôi xác nhận đã đọc và đồng ý với các Quy định & Điều khoản")
+                           .b-submit 
+                              +Btn("Xác nhận","button","center")

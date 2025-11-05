@@ -226,6 +226,9 @@
 .fa-9:before {
   content: "\39";
 }
+.fa-magnifying-glass:before {
+  content: "\f002";
+}
 .fa-fill-drip:before {
   content: "\f576";
 }

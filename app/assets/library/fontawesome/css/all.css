@@ -405,6 +405,9 @@
 .fa-phone:before {
   content: "\f095";
 }
+.fa-magnifying-glass:before {
+  content: "\f002";
+}
 .fa-location-dot:before {
   content: "\f3c5";
 }

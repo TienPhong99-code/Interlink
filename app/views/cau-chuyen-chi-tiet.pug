@@ -1,0 +1,62 @@
+extends layout/layout
+
+block vars
+    -title = ''
+    -bodyClass = 'page-story'
+    -hdClass = 'hd-second'
+
+block container
+   .sec-sts.ss-pd
+      .container 
+         .sts 
+            .sts-wrap
+               +breadCrumb(["Câu chuyện chi tiết"]) 
+               .sts-head 
+                  span.b-img 
+                     +img("sts-img.jpg")
+                  h1.t-name Nguyễn Ngọc Bảo Ngân
+                  span.txt Phòng Kinh Doanh
+                  p.text Từ Nhút Nhát Đến Tự Tin - Hành Trình Em Lớn Lên Cùng Interlink
+               .sts-content
+                  .b-wrap
+                     .b-content 
+                        .mona-content 
+                           p 
+                              | Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn. Lorem Ipsum đã trở thành ngành công nghiệp chuẩn cho việc in ấn từ những năm 1500, khi một họa sĩ vô danh ghép nhiều đoạn văn bản với nhau để tạo thành một bản mẫu sách.
+                     .b-bot 
+                        .d-flex.a-center 
+                           span.txt Chia sẻ ngay 
+                           .mxh-social
+                              a(href="").i-link
+                                 +img("ic-fbs.svg")
+                              a(href="").i-link
+                                 +img("ic-in.svg")
+                              .i-link.getlink.copyJS(data-url="https://interlink.com.vn/cau-chuyen-chi-tiet")
+                                 +img("ic-copy.svg")
+                                 span.getlink-note Đã sao chép
+   section.sec-sts-rl.ss-pd-b
+      .container 
+         .sts-rl 
+            .sts-rl-head.mb-40
+               +title("Những câu chuyện thành công","CÂU CHUYỆN LIÊN QUAN","")
+            .sts-rl-block 
+               .sts-rl-slider.slideSw
+                  .b-sw
+                     +Swiper()
+                        each i,index in Array(4)
+                           .swiper-slide.col.col-6
+                              .stm-it 
+                                 .b-img 
+                                    .inner 
+                                       +img(`stm-img (${index + 1}).jpg`)
+                                    a(href="").ic-link
+                                       i.fa-light.fa-arrow-right
+                                 .b-ctn 
+                                    .t-des 
+                                       p 
+                                          | Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.
+                                    span.line
+                                    .b-author.d-flex.d-col
+                                       span.txt.fw-6 Van Nguyen
+                                       span.text.fw-3.t14 Marketing
+   +form()

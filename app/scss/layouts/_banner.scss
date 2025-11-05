@@ -9,6 +9,7 @@
     justify-content: flex-end;
     @include max(1200px) {
       min-height: calc((4 / 9) * 100vw);
+      padding-bottom: 2.4rem;
     }
   }
   &-item {
@@ -49,6 +50,13 @@
       color: var(--color-white);
     }
     .b-btn {
+      @include max(768px) {
+        flex-direction: column;
+        gap: 1.2rem;
+        .btn {
+          min-width: 18rem;
+        }
+      }
       .btn.trans {
         color: var(--color-white);
         border-color: var(--color-white);
@@ -57,7 +65,8 @@
   }
   &-control {
     position: absolute;
-    width: 120rem;
+    width: 123rem;
+    padding: 0 1.5rem;
     max-width: 100%;
     left: 50%;
     transform: translateX(-50%);
@@ -66,10 +75,17 @@
     justify-content: flex-end;
     display: flex;
     pointer-events: none;
+    @include max(1200px) {
+      bottom: 2.4rem;
+      gap: 0.4rem !important;
+    }
     .swiper-pagination {
       width: 6rem;
       margin-top: 0;
       color: var(--color-white);
+      @include max(500px) {
+        width: 4rem;
+      }
     }
     .swiper-control-btn {
       pointer-events: auto;
@@ -152,6 +168,7 @@
     gap: 8rem;
     position: relative;
     padding: 4rem 0;
+    overflow: hidden;
     @include max(768px) {
       gap: 4rem;
     }
@@ -237,5 +254,181 @@
     @include fz-56;
     font-weight: 700;
     color: var(--color-pri);
+  }
+}
+.bn-exp {
+  position: relative;
+  &-br {
+    position: absolute;
+    width: 123rem;
+    max-width: 100%;
+    padding: 0 1.5rem;
+    top: calc(var(--size-hd) + 4rem);
+    z-index: 5;
+    left: 50%;
+    transform: translateX(-50%);
+    --color-text: var(--color-white);
+    @include max(1200px) {
+      top: 2rem;
+    }
+  }
+}
+.bn-exp-main {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    @include full;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+}
+.bn-exp-control {
+  position: absolute;
+  width: 123rem;
+  padding: 0 1.5rem;
+  max-width: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  z-index: 10;
+  justify-content: space-between;
+  .swiper-pagination {
+    display: none;
+  }
+}
+.bn-exp-it {
+  padding: 2.4rem;
+  z-index: 1;
+  position: relative;
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  @include max(768px) {
+    padding: 1.2rem;
+    gap: 0.6rem;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    @include full;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: -1;
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.3);
+    border-bottom: unset;
+    backdrop-filter: blur(1rem);
+    transition: 0.3s ease-in-out;
+  }
+  .title {
+    @include fz-24;
+    font-weight: 500;
+    color: var(--color-white);
+    @include lc(2);
+  }
+  .b-head {
+    display: flex;
+    gap: 2.4rem;
+    align-items: center;
+  }
+  .b-num {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    .num {
+      font-weight: 700;
+      color: var(--color-pri);
+      @include fz-40;
+      line-height: 1;
+    }
+  }
+  .b-ctn {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    @include fz-16;
+    @include max(768px) {
+      font-size: 1.4rem;
+      gap: 0.6rem;
+    }
+    .t-links {
+      color: var(--color-pri);
+      font-weight: 700;
+    }
+  }
+}
+.bn-exp-slider {
+  position: relative;
+}
+.bn-exp-thumb {
+  @include min(1201px) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  @include max(1200px) {
+    background: #111;
+  }
+  .swiper {
+    --rg: 0;
+    --cg: 0;
+    &-slide {
+      @include max(1200px) {
+        width: 100%;
+      }
+      &:not(:last-child) {
+        .bn-exp-it {
+          &::before {
+            border-right: 0.1rem solid rgba(255, 255, 255, 0.3);
+          }
+        }
+      }
+      &.swiper-slide-thumb-active {
+        .bn-exp-it {
+          &::before {
+            background: var(--color-sec);
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+}
+.bn-exp-pos {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  color: var(--color-white);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  @include max(1200px) {
+    top: 50%;
+  }
+  .txt {
+    @include fz-20;
+  }
+  .title {
+    @include fz-36;
+    font-weight: 700;
+  }
+}
+.bn-exp-img {
+  .inner {
+    aspect-ratio: 1500 / 850;
+    min-height: 40rem;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }

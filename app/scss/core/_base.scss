@@ -59,6 +59,9 @@ textarea {
   position: relative;
   z-index: 1;
   background: #f9f9f9;
+  @media screen and (max-width: 1200px) {
+    padding-top: var(--size-hd);
+  }
   &.page-py {
     padding-top: var(--size-hd);
   }

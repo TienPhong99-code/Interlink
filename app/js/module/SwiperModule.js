@@ -113,39 +113,40 @@ export default function SwiperModule() {
     loop: true,
     effect: "slide",
   });
-  //   const prodt_silder = document.querySelectorAll(".prdsSlider");
-  //   if (prodt_silder) {
-  //     prodt_silder.forEach((item, i) => {
-  //       const swiperMain = item.querySelector(".prdsMainSw .swiper");
-  //       const swiperThumb = item.querySelector(".prdsThumbSw .swiper");
+  const prodt_silder = document.querySelectorAll(".prdsSlider");
+  if (prodt_silder) {
+    prodt_silder.forEach((item, i) => {
+      const swiperMain = item.querySelector(".prdsMainSw .swiper");
+      const swiperThumb = item.querySelector(".prdsThumbSw .swiper");
 
-  //       const itemImg = new Swiper(swiperThumb, {
-  //         speed: 1200,
-  //         slidesPerView: "auto",
-  //         grabCursor: true,
-  //         loop: false,
-  //         initialSlide: 0,
-  //       });
-  //       //
-  //       const itemMain = new Swiper(swiperMain, {
-  //         speed: 1200,
-  //         slidesPerView: "auto",
-  //         effect: "fade",
-  //         loop: false,
-  //         navigation: {
-  //           nextEl: ".prds-control .swiper-next",
-  //           prevEl: ".prds-control .swiper-prev",
-  //         },
-  //         initialSlide: 0,
-  //         fadeEffect: {
-  //           crossFade: true,
-  //         },
-  //         grabCursor: true,
-  //         thumbs: {
-  //           swiper: itemImg,
-  //         },
-  //       });
-  //     });
-  //     //
-  //   }
+      const itemImg = new Swiper(swiperThumb, {
+        speed: 1200,
+        slidesPerView: "auto",
+        grabCursor: true,
+        loop: true,
+        initialSlide: 0,
+        slideToClickedSlide: true,
+      });
+      //
+      const itemMain = new Swiper(swiperMain, {
+        speed: 1200,
+        slidesPerView: "auto",
+        effect: "fade",
+        loop: true,
+        navigation: {
+          nextEl: ".bn-exp-control .swiper-next",
+          prevEl: ".bn-exp-control .swiper-prev",
+        },
+        initialSlide: 0,
+        fadeEffect: {
+          crossFade: true,
+        },
+        grabCursor: true,
+        thumbs: {
+          swiper: itemImg,
+        },
+      });
+    });
+    //
+  }
 }

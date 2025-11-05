@@ -63,6 +63,7 @@
       color: var(--color-text);
       transition: 0.3s ease-in-out;
       padding: 0 1.6rem;
+      @include font-pri();
       font-size: var(--fz-ip);
       background: var(--bg-ip);
       &::placeholder {
@@ -83,6 +84,7 @@
       outline: unset;
       color: var(--color-text);
       transition: 0.3s ease-in-out;
+      @include font-pri();
       resize: unset;
       @include font-pri();
       &::placeholder {
