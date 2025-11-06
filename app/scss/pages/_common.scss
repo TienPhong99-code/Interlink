@@ -1352,3 +1352,103 @@
     overflow: visible;
   }
 }
+.sff-head {
+  @include max(1024px) {
+    text-align: center;
+  }
+}
+.sff-row {
+  .col {
+    @include max(1024px) {
+      width: 100%;
+    }
+  }
+}
+.sff-group {
+  display: flex;
+  gap: 2.4rem;
+  @include max(600px) {
+    flex-direction: column;
+  }
+}
+
+.sff-box {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  padding: 1.2rem;
+  border: 0.1rem solid var(--cl-border);
+  flex: 1;
+  .icon {
+    display: block;
+    --size: 12rem;
+    width: var(--size);
+    height: var(--size);
+    @include max(1024px) {
+      --size: 8rem;
+    }
+    @include max(600px) {
+      --size: 6rem;
+    }
+  }
+  .t-gr {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    .text {
+      @include fz-20;
+      color: var(--color-pri);
+      font-weight: 300;
+    }
+    .t-num {
+      font-weight: 700;
+      color: var(--color-sec);
+      @include fz-32;
+    }
+    .txt {
+      @include fz-16;
+      color: var(--color-text);
+      font-weight: 300;
+    }
+  }
+}
+.sff-wrap {
+  padding-top: var(--pd-sc);
+  border-top: 0.1rem solid var(--cl-border);
+}
+.sec-sser {
+  background: var(--color-sec);
+  padding: var(--pd-sc) 0;
+}
+.sser-slider {
+  .service-item {
+    .inner {
+      aspect-ratio: 389/286;
+    }
+  }
+}
+.sec-prj-se,
+.sec-sser {
+  overflow: hidden;
+}
+.sser {
+  position: relative;
+}
+.sser-slider {
+  position: relative;
+  .swiper,
+  .swiper-container {
+    overflow: visible;
+  }
+  .swiper-control {
+    justify-content: center;
+  }
+  .swiper-slide {
+    @include max(1024px) {
+      width: 50%;
+    }
+    @include max(768px) {
+      width: 75%;
+    }
+  }
+}

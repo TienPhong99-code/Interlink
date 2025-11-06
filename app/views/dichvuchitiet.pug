@@ -113,3 +113,70 @@ block container
                                           +Btn("Đọc tiếp","","b-link")
                   .b-btn.mt-24
                      +Btn("Xem tất cả dự án","","center")
+   section.sec-sff.ss-pd
+      .container 
+         .sff 
+            .sff-wrap 
+               .sff-row.row 
+                  .col.col-4
+                     .sff-head 
+                        +title("Lorem","FACTS & FIGURES")
+                  .col.col-8
+                     .sff-panel 
+                        .sff-group 
+                           .sff-box 
+                              span.icon 
+                                 +img("sff-ic (1).svg")
+                              .t-gr 
+                                 span.text COVERAGE OF
+                                 span.t-num > 600
+                                 span.txt Shipping routes worldwide
+                           .sff-box
+                              span.icon 
+                                 +img("sff-ic (2).svg")
+                              .t-gr 
+                                 span.text VOLUMES
+                                 span.t-num > 1.3M TEUs
+                                 span.txt Ocean volume annually
+   section.sec-sser
+      .container 
+         .sser 
+            .sser-wrap 
+               .sser-head.mb-40
+                  +title("Xem các dịch","DỊCH VỤ CHÍNH","t-center white")
+               .sser-block 
+                  .sser-slider.slideSw
+                     .b-sw 
+                        +Swiper()
+                           each i,index in Array(4)
+                              .swiper-slide.col.col-4
+                                 .service-item
+                                    a(href="").hidden-link
+                                    .b-inner 
+                                       .inner 
+                                          +img('service-img.jpg')
+                                       .t-gr
+                                          h3.t-text Vận Chuyển Đường Biển
+                     .mt-24
+                        +SwiperControl()
+   section.sec-hbr.ss-pd
+      .container 
+         .hbr 
+            .hbr-wrap
+               .hbr-head.mb-40
+                  .b-head.t-center
+                     span.txt.c-sec.t18 Đối tác & hãng tàu
+                     .head.mt-12
+                        h2.t-title 
+                           | CÁC ĐỐI TÁC & HÃNG TÀU 
+                           br
+                           | ĐÃ LÀM VIỆC CÙNG INTERLINK
+               .hbr-block
+                  .hbr-slider.slideSwLogo
+                     +Swiper()
+                        each i,index in Array(8)
+                           .swiper-slide.col
+                              .hbr-item 
+                                 .b-img 
+                                    .inner 
+                                       +img(`hbr-img (${index + 1}).png`)

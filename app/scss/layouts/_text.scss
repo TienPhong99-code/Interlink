@@ -17,7 +17,8 @@
     align-items: center;
   }
   &.white {
-    .t-title {
+    .t-title,
+    .txt {
       color: var(--color-white);
     }
     .b-tag {
