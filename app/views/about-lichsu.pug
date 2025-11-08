@@ -1,0 +1,96 @@
+extends layout/layout
+
+block vars
+    -title = ''
+    -bodyClass = 'page-about page-py'
+    -hdClass = 'hd-second'
+
+block container
+   .bnt
+      .container 
+         .bnt-wrap 
+            +breadCrumb(["Về chúng tôi"])
+            .bnt-head(data-aos="fade-up")
+               span.txt Giải pháp logistics toàn diện
+               h1.title KẾT NỐI TOÀN CẦU VẬN HÀNH TỐI ƯU
+            .bnt-dc 
+               .inner(data-aos="fade")
+                  +img("bnt-dc.png")
+      .bnt-slider 
+         .b-sw.slideFade.posi-rl
+            +SwiperControl("bnt-control")
+            +Swiper()
+               each i,index in Array(3)
+                  .swiper-slide 
+                     .bnt-it 
+                        .inner 
+                           +img(`bnt-slide (${index + 1}).jpg`)
+   .abi-py.ss-pd
+      .abi-links 
+         a(href="").t-links
+            | Về Interlink
+         a(href="").t-links
+            | Hệ giá trị tư tưởng
+         a(href="").t-links
+            | Lịch sử hình thành
+         a(href="").t-links
+            | Hiệp hội & Giải thưởng
+   section.sec-ssh
+      .ssh.sshJS
+         .ssh-wrap 
+            .container 
+               .ssh-head 
+                  +title("Hành trình phát triển của Interlink","LỊCH SỬ HÌNH THÀNH")
+                  .ssh-timeline
+                     .b-time 
+                        | 2000 - 2007
+                     .b-time 
+                        | 2010 - 2012
+                     .b-time 
+                        | 2022 - NOW
+            .ssh-block
+               each i,index in Array(2)
+                  .ssh-item
+                     .ssh-bg.sshBaner
+                        .inner-img
+                           .img-wrap 
+                              +img("ssh-bg (1).jpg")
+                           .inner-ctn 
+                              span.b-logo 
+                                 +img("ssh-logo.svg")
+                              .b-year 2010 - 2021
+                     .ssh-panel.sshContent.arch
+                        .b-container 
+                           .ssh-wr
+                              .b-flex 
+                                 .col-left 
+                                    .ssh-ctn 
+                                       each i,index in Array(6)
+                                          .box-it.arch__info
+                                             .t-head 
+                                                | 202#{index + 1}
+                                             .b-content 
+                                                .t-gr 
+                                                   span.t-num 04
+                                                   .b-des
+                                                      p.text 
+                                                         | Mở rộng mạng lưới dịch vụ logistics toàn diện với việc thành lập các chi nhánh mới tại các thành phố chiến lược.
+                                                      .b-media 
+                                                         .img-aw
+                                                            +img("hbr-img-reward.jpg")
+                                                .t-gr 
+                                                   span.t-num 04
+                                                   .b-des
+                                                      p.text 
+                                                         | Mở rộng mạng lưới dịch vụ logistics toàn diện với việc thành lập các chi nhánh mới tại các thành phố chiến lược.
+                                 .col-right
+                                    .ssh-imgs.arch__right
+                                       .b-img(data-index="4")
+                                          +img("ssh-img (1).jpg")
+                                       .b-img(data-index="3")
+                                          +img("ssh-img (2).jpg")
+                                       .b-img(data-index="2")
+                                          +img("ssh-img (3).jpg")
+                                       .b-img(data-index="1")
+                                          +img("ssh-img (4).jpg")
+   +form()

@@ -87,7 +87,7 @@ block container
                                     | Kết nối với hơn 500 cảng biển trên toàn thế giới, đảm bảo vận chuyển nhanh chóng và hiệu quả.
       .hbi-bot
          | INTERLINK
-   section.sec-prj-se.ss-pd-b
+   section.sec-prj-se
       .container 
          .prj-se 
             .prj-se-wrap 
@@ -180,3 +180,42 @@ block container
                                  .b-img 
                                     .inner 
                                        +img(`hbr-img (${index + 1}).png`)
+   section.sec-fb.ss-pd-b
+      .container 
+         .fb-wrap 
+            .fb-head.mb-40
+               .d-flex.a-center.j-bw 
+                  .b-head 
+                     +title("Khách hàng là minh chứng cho uy tín của Interlink","KHÁCH HÀNG CỦA CHÚNG TÔI","")
+                  +Btn("Liên hệ ngay","","")
+            .fb-block 
+               .fb-slider.slideFb
+                  .b-sw 
+                     +Swiper()
+                        each i,index in Array(5)
+                           .swiper-slide.col-4.col
+                              .fb-item 
+                                 .b-img 
+                                    .inner 
+                                       +img("fb-img.jpg")
+                                    a(href="" data-fancybox).ic-play
+                                       +img("ic-play2.svg") 
+                                 .b-ctn 
+                                    .b-star 
+                                       each i,index in Array(5)
+                                          +img("ic-star.svg")
+                                    .b-des 
+                                       p 
+                                          | Lorem Ipsum chỉ đơn giản là một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang phục vụ cho in ấn.
+                                    .b-author 
+                                       span.txt.fw-6 Van Nguyen
+                                       span.txt.fw-4.t14 Founder
+                  .fb-bot 
+                     .swiper-pagination.fb-pagination
+                     .b-group 
+                        each i,index in Array(4)
+                           span.avt-img
+                              +img(`fb-avt (${index + 1}).jpg`)
+                        span.avt-img 
+                           | +6789
+   +form() 

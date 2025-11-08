@@ -56,6 +56,21 @@ export default function SwiperModule() {
     loop: false,
     effect: "slide",
   });
+  functionSlider(".slideFb", {
+    speed: 1200,
+    autoplay: {
+      delay: 2600,
+    },
+    slidesPerView: "auto",
+    initialSlide: 0,
+    centeredSlides: false,
+    loop: false,
+    effect: "slide",
+    pagination: {
+      el: ".fb-pagination",
+      type: "progressbar",
+    },
+  });
   functionSlider(".slideSwLogo", {
     speed: 6000,
     allowTouchMove: false,

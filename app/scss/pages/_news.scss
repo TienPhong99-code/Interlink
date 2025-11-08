@@ -122,6 +122,21 @@
   background: #eee;
   transition: 0.3s ease-in-out;
   .b-img {
+    position: relative;
+    .ic-play {
+      --size: 4rem;
+      width: var(--size);
+      height: var(--size);
+      border-radius: 100rem;
+      display: block;
+      @include mid();
+      z-index: 1;
+      transition: 0.3s ease-in-out;
+      position: absolute;
+      @include hover {
+        transform: translate(-50%, -50%) scale(0.9);
+      }
+    }
     .inner {
       aspect-ratio: 380 / 280;
       img {
@@ -138,6 +153,10 @@
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
+    @include max(1200px) {
+      padding: 1.2rem;
+      gap: 1.2rem;
+    }
   }
   .b-star {
     display: flex;
@@ -165,7 +184,49 @@
     }
   }
 }
-
+.fb-slider {
+  .swiper-slide {
+    @include max(911px) {
+      width: 50%;
+    }
+    @include max(500px) {
+      width: 75%;
+    }
+  }
+}
+.fb-bot {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  margin-top: 2.4rem;
+  .swiper-pagination {
+    flex: 1;
+  }
+  .b-group {
+    display: flex;
+    @include max(911px) {
+      display: none;
+    }
+    .avt-img {
+      display: block;
+      --size: 6rem;
+      border-radius: 100rem;
+      width: var(--size);
+      height: var(--size);
+      border: 0.2rem solid #fff;
+      overflow: hidden;
+      position: relative;
+      background: #c4c4c4;
+      color: #000;
+      place-content: center;
+      text-align: center;
+      font-size: 1.2rem;
+      &:not(:last-child) {
+        margin-right: -2rem;
+      }
+    }
+  }
+}
 .hbi-container {
   width: calc((100vw - (100vw - 123rem) / 2));
   max-width: 100%;

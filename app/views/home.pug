@@ -99,7 +99,7 @@ block container
                      +title("Khách hàng là minh chứng cho uy tín của Interlink","KHÁCH HÀNG CỦA CHÚNG TÔI","")
                   +Btn("Liên hệ ngay","","")
             .fb-block 
-               .fb-slider.slideSw
+               .fb-slider.slideFb
                   .b-sw 
                      +Swiper()
                         each i,index in Array(5)
@@ -108,6 +108,8 @@ block container
                                  .b-img 
                                     .inner 
                                        +img("fb-img.jpg")
+                                    a(href="" data-fancybox).ic-play
+                                       +img("ic-play2.svg") 
                                  .b-ctn 
                                     .b-star 
                                        each i,index in Array(5)
@@ -118,6 +120,14 @@ block container
                                     .b-author 
                                        span.txt.fw-6 Van Nguyen
                                        span.txt.fw-4.t14 Founder
+                  .fb-bot 
+                     .swiper-pagination.fb-pagination
+                     .b-group 
+                        each i,index in Array(4)
+                           span.avt-img
+                              +img(`fb-avt (${index + 1}).jpg`)
+                        span.avt-img 
+                           | +6789
    section.sec-case.ss-pd 
       .container 
          .case 
